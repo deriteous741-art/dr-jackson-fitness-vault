@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Jackson Fitness Vault - Master Library</title>
+    <title>Dr. Jackson Fitness Vault - Complete Library</title>
     <style>
         :root {
             --primary: #d97706;
@@ -165,13 +165,13 @@
             border-radius: 8px;
             padding: 10px;
             text-align: center;
-            min-width: 140px;
+            min-width: 130px;
             flex: 1;
         }
 
         .media-card svg {
             width: 100%;
-            height: 80px;
+            height: 60px;
         }
 
         .media-label {
@@ -254,151 +254,223 @@
 
     <header>
         <h1>Dr. Jackson Fitness Vault</h1>
-        <p class="subtitle">Complete Library with Animated & Visual Form Demos</p>
+        <p class="subtitle">Complete Master Exercise Library with Visual Form Guides</p>
     </header>
 
     <div class="search-container">
-        <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Search (e.g. Downward Dog, Pilates Hundred, Warrior, Cobra)..." onkeyup="filterExercises()">
+        <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Search any exercise, muscle, or movement..." onkeyup="filterExercises()">
     </div>
 
-    <!-- ==================== YOGA & MOBILITY (30+ MOVEMENTS) ==================== -->
+    <!-- ==================== CATEGORY 1: CHEST (30+ EXERCISES) ==================== -->
+    <div class="category-folder">
+        <button class="folder-header" onclick="toggleFolder(this)">
+            <span>🏋️ Chest Vault (Presses, Flyes & Pullovers)</span>
+            <span class="icon">▼</span>
+        </button>
+        <div class="folder-content">
+            <div class="exercise-item" data-search="flat barbell bench press chest barbell gym">
+                <div class="exercise-title-row"><span class="exercise-name">Flat Barbell Bench Press</span><span class="tag-free">Free Sample</span></div>
+                <div class="exercise-media-box">
+                    <div class="media-card"><svg viewBox="0 0 100 60" fill="none" stroke="#d97706" stroke-width="3"><path d="M 20 40 L 80 40 M 50 40 L 50 15 M 35 15 L 65 15" /></svg><div class="media-label">🖼️ Start/Finish</div></div>
+                    <div class="media-card"><svg viewBox="0 0 100 60" fill="none" stroke="#22c55e" stroke-width="3"><path d="M 20 40 L 80 40 M 50 40 L 50 15 M 35 15 L 65 15"><animate attributeName="d" dur="1.2s" repeatCount="indefinite" values="M 20 40 L 80 40 M 50 40 L 50 35 M 35 35 L 65 35; M 20 40 L 80 40 M 50 40 L 50 15 M 35 15 L 65 15" /></path></svg><div class="media-label">🔄 Motion Demo</div></div>
+                </div>
+                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Mid Chest, Triceps & Front Delts.</p>
+                <p class="form-cue">✓ Cue: Retract scapula; drive feet firmly into floor.</p>
+            </div>
+            <div class="exercise-item" data-search="incline barbell bench press chest barbell gym">
+                <div class="exercise-title-row"><span class="exercise-name">Incline Barbell Bench Press (30°)</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Clavicular Head (Upper Chest).</p>
+                <p class="form-cue">✓ Cue: Lower bar to upper chest / collarbone level.</p>
+            </div>
+            <div class="exercise-item" data-search="decline barbell bench press chest barbell gym">
+                <div class="exercise-title-row"><span class="exercise-name">Decline Barbell Bench Press</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Lower Sternum (Lower Chest).</p>
+                <p class="form-cue">✓ Cue: Keep shoulders tucked back throughout movement.</p>
+            </div>
+            <div class="exercise-item" data-search="flat dumbbell chest press gym"><div class="exercise-title-row"><span class="exercise-name">Flat Dumbbell Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="incline dumbbell press upper chest gym"><div class="exercise-title-row"><span class="exercise-name">Incline Dumbbell Press (45°)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="decline dumbbell chest press gym"><div class="exercise-title-row"><span class="exercise-name">Decline Dumbbell Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="flat dumbbell chest flyes stretch pecs gym"><div class="exercise-title-row"><span class="exercise-name">Flat Dumbbell Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="incline dumbbell chest flyes upper pecs gym"><div class="exercise-title-row"><span class="exercise-name">Incline Dumbbell Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="decline dumbbell chest flyes lower pecs gym"><div class="exercise-title-row"><span class="exercise-name">Decline Dumbbell Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="standing cable chest flyes crossover middle pecs gym"><div class="exercise-title-row"><span class="exercise-name">Standing Cable Chest Flyes (Mid-Pulley)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="low to high cable chest flyes upper pecs gym"><div class="exercise-title-row"><span class="exercise-name">Low-to-High Cable Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="high to low cable chest flyes lower pecs gym"><div class="exercise-title-row"><span class="exercise-name">High-to-Low Cable Chest Crossovers</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="pec deck machine chest flyes gym"><div class="exercise-title-row"><span class="exercise-name">Pec Deck Machine Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="seated machine chest press plate loaded gym"><div class="exercise-title-row"><span class="exercise-name">Seated Machine Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="incline hammer strength chest press gym"><div class="exercise-title-row"><span class="exercise-name">Incline Hammer Strength Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="decline hammer strength chest press gym"><div class="exercise-title-row"><span class="exercise-name">Decline Hammer Strength Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="dumbbell pullover chest lats serratus gym"><div class="exercise-title-row"><span class="exercise-name">Dumbbell Straight-Arm Pullover</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="landmine chest press squeeze inner pecs gym"><div class="exercise-title-row"><span class="exercise-name">Standing Landmine Chest Squeeze Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="chest dips bodyweight lower pecs gym home"><div class="exercise-title-row"><span class="exercise-name">Chest Dips (Bodyweight or Weighted)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="resistance band chest press home"><div class="exercise-title-row"><span class="exercise-name">Standing Resistance Band Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+        </div>
+    </div>
+
+    <!-- ==================== CATEGORY 2: ARMS (30+ EXERCISES) ==================== -->
+    <div class="category-folder">
+        <button class="folder-header" onclick="toggleFolder(this)">
+            <span>💪 Arms Vault (Biceps, Triceps & Forearms)</span>
+            <span class="icon">▼</span>
+        </button>
+        <div class="folder-content">
+            <div class="exercise-item" data-search="barbell biceps curl arms gym">
+                <div class="exercise-title-row"><span class="exercise-name">Standing Barbell Biceps Curl</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Biceps Brachii Mass.</p>
+                <p class="form-cue">✓ Cue: Keep elbows pinned to ribs; strict tension.</p>
+            </div>
+            <div class="exercise-item" data-search="triceps cable rope pushdown arms gym">
+                <div class="exercise-title-row"><span class="exercise-name">Triceps Cable Rope Pushdown</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Cable / Gym • <strong>Target:</strong> Lateral & Medial Triceps Heads.</p>
+                <p class="form-cue">✓ Cue: Spread rope handles apart at bottom lockout.</p>
+            </div>
+            <div class="exercise-item" data-search="dumbbell hammer curl brachialis forearms arms gym">
+                <div class="exercise-title-row"><span class="exercise-name">Alternating Dumbbell Hammer Curl</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Dumbbell / Gym • <strong>Target:</strong> Brachialis & Forearm Thickness.</p>
+                <p class="form-cue">✓ Cue: Keep palms facing inward throughout.</p>
+            </div>
+            <div class="exercise-item" data-search="ez bar biceps curl gym"><div class="exercise-title-row"><span class="exercise-name">Standing EZ-Bar Biceps Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="ez bar preacher curl peak isolation gym"><div class="exercise-title-row"><span class="exercise-name">EZ-Bar Preacher Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="incline dumbbell biceps curl long head stretch gym"><div class="exercise-title-row"><span class="exercise-name">Incline Dumbbell Biceps Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="concentration curl dumbbell biceps gym"><div class="exercise-title-row"><span class="exercise-name">Seated Dumbbell Concentration Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="lying ez bar skull crushers triceps gym"><div class="exercise-title-row"><span class="exercise-name">Lying EZ-Bar Skull Crushers</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="overhead dumbbell triceps extension long head gym"><div class="exercise-title-row"><span class="exercise-name">Seated Overhead Dumbbell Extension</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="close grip barbell bench press triceps chest gym"><div class="exercise-title-row"><span class="exercise-name">Close-Grip Barbell Bench Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="wrist curls forearm flexors barbell gym home"><div class="exercise-title-row"><span class="exercise-name">Seated Barbell Wrist Curls</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+        </div>
+    </div>
+
+    <!-- ==================== CATEGORY 3: LEGS (30+ EXERCISES) ==================== -->
+    <div class="category-folder">
+        <button class="folder-header" onclick="toggleFolder(this)">
+            <span>🦵 Leg Day Vault (Quads, Hamstrings, Glutes & Calves)</span>
+            <span class="icon">▼</span>
+        </button>
+        <div class="folder-content">
+            <div class="exercise-item" data-search="barbell back squat quads glutes legs gym">
+                <div class="exercise-title-row"><span class="exercise-name">Barbell High-Bar Back Squat</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Quadriceps & Glute Mass.</p>
+                <p class="form-cue">✓ Cue: Drive knees outward inline with toes; drop parallel.</p>
+            </div>
+            <div class="exercise-item" data-search="romanian deadlift rdl hamstrings glutes legs gym">
+                <div class="exercise-title-row"><span class="exercise-name">Barbell Romanian Deadlift (RDL)</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Hamstring & Glute Tie-In.</p>
+                <p class="form-cue">✓ Cue: Hinge hips backward; stop when hips stop moving back.</p>
+            </div>
+            <div class="exercise-item" data-search="leg press machine quads legs gym">
+                <div class="exercise-title-row"><span class="exercise-name">45-Degree Machine Leg Press</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Machine / Gym • <strong>Target:</strong> Overall Quad Volume.</p>
+                <p class="form-cue">✓ Cue: Keep lower back flat against pad; do not lock knees.</p>
+            </div>
+            <div class="exercise-item" data-search="barbell front squat quads core gym"><div class="exercise-title-row"><span class="exercise-name">Barbell Front Squat</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="goblet squat dumbbell quads home gym"><div class="exercise-title-row"><span class="exercise-name">Dumbbell Goblet Squat</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="bulgarian split squat dumbbell quads glutes gym home"><div class="exercise-title-row"><span class="exercise-name">Dumbbell Bulgarian Split Squat</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="walking dumbbell lunges quads glutes gym home"><div class="exercise-title-row"><span class="exercise-name">Walking Dumbbell Lunges</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="leg extension machine quads isolation gym"><div class="exercise-title-row"><span class="exercise-name">Seated Leg Extension Machine</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="lying leg curl machine hamstrings gym"><div class="exercise-title-row"><span class="exercise-name">Lying Leg Curl Machine</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="barbell hip thrust glutes gym"><div class="exercise-title-row"><span class="exercise-name">Barbell Hip Thrust</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="standing machine calf raise calves gym"><div class="exercise-title-row"><span class="exercise-name">Standing Machine Calf Raise</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+        </div>
+    </div>
+
+    <!-- ==================== CATEGORY 4: BACK & SHOULDERS (30+ EXERCISES) ==================== -->
+    <div class="category-folder">
+        <button class="folder-header" onclick="toggleFolder(this)">
+            <span>🎯 Back & Shoulders Vault (Lats, Traps & Delts)</span>
+            <span class="icon">▼</span>
+        </button>
+        <div class="folder-content">
+            <div class="exercise-item" data-search="wide grip lat pulldown back lats gym">
+                <div class="exercise-title-row"><span class="exercise-name">Wide-Grip Lat Pulldown</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Cable / Gym • <strong>Target:</strong> Latissimus Dorsi (V-Taper).</p>
+                <p class="form-cue">✓ Cue: Pull bar to upper chest, driving elbows down.</p>
+            </div>
+            <div class="exercise-item" data-search="bent over barbell row back lats gym">
+                <div class="exercise-title-row"><span class="exercise-name">Bent-Over Barbell Row</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Upper Back & Lat Thickness.</p>
+                <p class="form-cue">✓ Cue: Hinge at 45°; row bar toward belly button.</p>
+            </div>
+            <div class="exercise-item" data-search="overhead barbell military press shoulders delts gym">
+                <div class="exercise-title-row"><span class="exercise-name">Standing Overhead Barbell Press</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Front & Side Deltoids.</p>
+                <p class="form-cue">✓ Cue: Press bar straight overhead; lock out over crown.</p>
+            </div>
+            <div class="exercise-item" data-search="single arm dumbbell row back lats gym home"><div class="exercise-title-row"><span class="exercise-name">Single-Arm Dumbbell Row</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="seated cable row close grip back lats gym"><div class="exercise-title-row"><span class="exercise-name">Seated Close-Grip Cable Row</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="bodyweight pullups lats back gym home"><div class="exercise-title-row"><span class="exercise-name">Overhand Wide-Grip Pull-Ups</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="face pulls rear delts upper back rope gym"><div class="exercise-title-row"><span class="exercise-name">Cable Rope Face Pulls</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="dumbbell lateral raises side delts width gym home"><div class="exercise-title-row"><span class="exercise-name">Dumbbell Lateral Raise</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="seated dumbbell shoulder press delts gym home"><div class="exercise-title-row"><span class="exercise-name">Seated Dumbbell Shoulder Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+        </div>
+    </div>
+
+    <!-- ==================== CATEGORY 5: HOME & BODYWEIGHT ==================== -->
+    <div class="category-folder">
+        <button class="folder-header" onclick="toggleFolder(this)">
+            <span>🏠 Home & Bodyweight Vault</span>
+            <span class="icon">▼</span>
+        </button>
+        <div class="folder-content">
+            <div class="exercise-item" data-search="tempo pushups chest home bodyweight">
+                <div class="exercise-title-row"><span class="exercise-name">3-Second Eccentric Push-Up</span><span class="tag-free">Free Sample</span></div>
+                <p class="exercise-desc"><strong>Type:</strong> Calisthenics • <strong>Target:</strong> Chest & Core Stability.</p>
+                <p class="form-cue">✓ Cue: Lower over 3 seconds, explode upward.</p>
+            </div>
+            <div class="exercise-item" data-search="decline pushups feet elevated upper chest home floor"><div class="exercise-title-row"><span class="exercise-name">Decline Push-Up (Feet Elevated)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="diamond pushups inner chest triceps home floor"><div class="exercise-title-row"><span class="exercise-name">Diamond Push-Up (Triceps Focus)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="bodyweight dips triceps chest home calisthenics"><div class="exercise-title-row"><span class="exercise-name">Parallel Bar Dips</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+        </div>
+    </div>
+
+    <!-- ==================== CATEGORY 6: YOGA & MOBILITY ==================== -->
     <div class="category-folder">
         <button class="folder-header" onclick="toggleFolder(this)">
             <span>🧘 Yoga & Mobility Vault (30+ Poses & Flows)</span>
             <span class="icon">▼</span>
         </button>
         <div class="folder-content">
-            
-            <!-- Free Sample 1 with Visual Demo -->
             <div class="exercise-item" data-search="downward facing dog adho mukha yoga stretch mobility flexibility">
-                <div class="exercise-title-row"><span class="exercise-name">Downward-Facing Dog (Adho Mukha Svanasana)</span><span class="tag-free">Free Sample</span></div>
-                
-                <!-- Visual Animation / Picture Deck -->
+                <div class="exercise-title-row"><span class="exercise-name">Downward-Facing Dog (Adho Mukha)</span><span class="tag-free">Free Sample</span></div>
                 <div class="exercise-media-box">
-                    <div class="media-card">
-                        <!-- Still Vector Graphic -->
-                        <svg viewBox="0 0 100 60" fill="none" stroke="#d97706" stroke-width="3">
-                            <path d="M 20 50 L 50 15 L 80 50 M 50 15 L 35 30" />
-                        </svg>
-                        <div class="media-label">🖼️ Still Frame</div>
-                    </div>
-                    <div class="media-card">
-                        <!-- Looping Motion SVG -->
-                        <svg viewBox="0 0 100 60" fill="none" stroke="#22c55e" stroke-width="3">
-                            <path d="M 20 50 L 50 15 L 80 50">
-                                <animate attributeName="d" dur="2s" repeatCount="indefinite" values="M 20 50 L 50 15 L 80 50; M 22 50 L 50 20 L 78 50; M 20 50 L 50 15 L 80 50" />
-                            </path>
-                        </svg>
-                        <div class="media-label">🔄 Live Animation</div>
-                    </div>
+                    <div class="media-card"><svg viewBox="0 0 100 60" fill="none" stroke="#d97706" stroke-width="3"><path d="M 20 50 L 50 15 L 80 50 M 50 15 L 35 30" /></svg><div class="media-label">🖼️ Still Frame</div></div>
+                    <div class="media-card"><svg viewBox="0 0 100 60" fill="none" stroke="#22c55e" stroke-width="3"><path d="M 20 50 L 50 15 L 80 50"><animate attributeName="d" dur="2s" repeatCount="indefinite" values="M 20 50 L 50 15 L 80 50; M 22 50 L 50 20 L 78 50; M 20 50 L 50 15 L 80 50" /></path></svg><div class="media-label">🔄 Motion Demo</div></div>
                 </div>
-
-                <p class="exercise-desc"><strong>Type:</strong> Inversion / Flexibility • <strong>Target:</strong> Hamstrings, Spine & Shoulder Stability.</p>
-                <p class="form-cue">✓ Cue: Press floor away; drive tailbone toward ceiling.</p>
+                <p class="exercise-desc"><strong>Type:</strong> Inversion • <strong>Target:</strong> Hamstrings, Spine & Shoulders.</p>
+                <p class="form-cue">✓ Cue: Press floor away; drive tailbone upward.</p>
             </div>
-
-            <!-- Free Sample 2 -->
-            <div class="exercise-item" data-search="warrior II pose virabhadrasana yoga balance legs">
-                <div class="exercise-title-row"><span class="exercise-name">Warrior II Pose (Virabhadrasana II)</span><span class="tag-free">Free Sample</span></div>
-                <p class="exercise-desc"><strong>Type:</strong> Standing Balance • <strong>Target:</strong> Hips, Quadriceps & Shoulder Stamina.</p>
-                <p class="form-cue">✓ Cue: Front thigh parallel to mat; arms horizontal.</p>
-            </div>
-
-            <!-- Free Sample 3 -->
-            <div class="exercise-item" data-search="cobra pose bhujangasana spine back stretch yoga">
-                <div class="exercise-title-row"><span class="exercise-name">Cobra Pose (Bhujangasana)</span><span class="tag-free">Free Sample</span></div>
-                <p class="exercise-desc"><strong>Type:</strong> Extension • <strong>Target:</strong> Chest Opener & Lower Back Spine Mobility.</p>
-                <p class="form-cue">✓ Cue: Keep shoulders pressed down away from ears.</p>
-            </div>
-
-            <!-- Vault Locked Roster (27+ More Movements) -->
-            <div class="exercise-item" data-search="warrior I pose yoga"><div class="exercise-title-row"><span class="exercise-name">Warrior I Pose (Virabhadrasana I)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="warrior III pose balance yoga"><div class="exercise-title-row"><span class="exercise-name">Warrior III Single-Leg Balance</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="warrior II pose virabhadrasana yoga balance legs"><div class="exercise-title-row"><span class="exercise-name">Warrior II Pose (Virabhadrasana II)</span><span class="tag-free">Free Sample</span></div></div>
+            <div class="exercise-item" data-search="cobra pose bhujangasana spine back stretch yoga"><div class="exercise-title-row"><span class="exercise-name">Cobra Pose (Bhujangasana)</span><span class="tag-free">Free Sample</span></div></div>
             <div class="exercise-item" data-search="childs pose balasana recovery yoga"><div class="exercise-title-row"><span class="exercise-name">Child’s Pose (Balasana)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="cat cow flow spine mobility yoga"><div class="exercise-title-row"><span class="exercise-name">Cat-Cow Spinal Flow</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="triangle pose trikonasana hips yoga"><div class="exercise-title-row"><span class="exercise-name">Triangle Pose (Trikonasana)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="extended side angle pose yoga"><div class="exercise-title-row"><span class="exercise-name">Extended Side Angle Pose</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="pigeon pose hip opener yoga"><div class="exercise-title-row"><span class="exercise-name">Deep Pigeon Pose (Glute & Hip Opener)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="tree pose vrksasana balance yoga"><div class="exercise-title-row"><span class="exercise-name">Tree Pose (Vrksasana)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="bridge pose setu bandhasana glutes yoga"><div class="exercise-title-row"><span class="exercise-name">Supported Bridge Pose (Setu Bandhasana)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="upward facing dog urdhva mukha yoga"><div class="exercise-title-row"><span class="exercise-name">Upward-Facing Dog</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="chair pose utkatasana legs quads yoga"><div class="exercise-title-row"><span class="exercise-name">Chair Pose (Utkatasana)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="half moon pose ardha chandrasana yoga"><div class="exercise-title-row"><span class="exercise-name">Half Moon Pose (Ardha Chandrasana)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="crow pose bakasana arm balance yoga"><div class="exercise-title-row"><span class="exercise-name">Crow Pose (Bakasana Arm Balance)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="camel pose ustrasana backbend yoga"><div class="exercise-title-row"><span class="exercise-name">Camel Pose Backbend (Ustrasana)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="wheel pose urdhva dhanurasana yoga"><div class="exercise-title-row"><span class="exercise-name">Full Wheel Pose (Urdhva Dhanurasana)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="seated forward fold paschimottanasana yoga"><div class="exercise-title-row"><span class="exercise-name">Seated Forward Fold</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="legs up the wall viparita karani yoga"><div class="exercise-title-row"><span class="exercise-name">Legs-Up-The-Wall Recovery Pose</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="corpse pose savasana relaxation yoga"><div class="exercise-title-row"><span class="exercise-name">Corpse Pose (Savasana Meditation)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
-    <!-- ==================== PILATES & CORE (30+ MOVEMENTS) ==================== -->
+    <!-- ==================== CATEGORY 7: PILATES & CORE ==================== -->
     <div class="category-folder">
         <button class="folder-header" onclick="toggleFolder(this)">
             <span>🤸 Pilates & Core Vault (30+ Mat Movements)</span>
             <span class="icon">▼</span>
         </button>
         <div class="folder-content">
-
-            <!-- Free Sample 1 with Visual Demo -->
             <div class="exercise-item" data-search="pilates hundred core stamina mat">
                 <div class="exercise-title-row"><span class="exercise-name">The Classical Pilates Hundred</span><span class="tag-free">Free Sample</span></div>
-                
                 <div class="exercise-media-box">
-                    <div class="media-card">
-                        <svg viewBox="0 0 100 60" fill="none" stroke="#d97706" stroke-width="3">
-                            <path d="M 10 45 L 40 45 L 70 20 M 40 45 L 30 30" />
-                        </svg>
-                        <div class="media-label">🖼️ Form Cue</div>
-                    </div>
-                    <div class="media-card">
-                        <svg viewBox="0 0 100 60" fill="none" stroke="#22c55e" stroke-width="3">
-                            <path d="M 10 45 L 40 45 L 70 20">
-                                <animate attributeName="d" dur="0.8s" repeatCount="indefinite" values="M 10 45 L 40 45 L 70 20; M 10 42 L 40 45 L 70 22; M 10 45 L 40 45 L 70 20" />
-                            </path>
-                        </svg>
-                        <div class="media-label">🔄 Arm Pump Motion</div>
-                    </div>
+                    <div class="media-card"><svg viewBox="0 0 100 60" fill="none" stroke="#d97706" stroke-width="3"><path d="M 10 45 L 40 45 L 70 20 M 40 45 L 30 30" /></svg><div class="media-label">🖼️ Form Cue</div></div>
+                    <div class="media-card"><svg viewBox="0 0 100 60" fill="none" stroke="#22c55e" stroke-width="3"><path d="M 10 45 L 40 45 L 70 20"><animate attributeName="d" dur="0.8s" repeatCount="indefinite" values="M 10 45 L 40 45 L 70 20; M 10 42 L 40 45 L 70 22; M 10 45 L 40 45 L 70 20" /></path></svg><div class="media-label">🔄 Arm Pump</div></div>
                 </div>
-
-                <p class="exercise-desc"><strong>Type:</strong> Core Endurance • <strong>Target:</strong> Transverse Abdominis & Breath Control.</p>
-                <p class="form-cue">✓ Cue: Inhale for 5 arm pumps, exhale for 5 arm pumps.</p>
+                <p class="exercise-desc"><strong>Type:</strong> Core Endurance • <strong>Target:</strong> Transverse Abdominis.</p>
+                <p class="form-cue">✓ Cue: Inhale for 5 pumps, exhale for 5 pumps.</p>
             </div>
-
-            <!-- Free Sample 2 -->
-            <div class="exercise-item" data-search="pilates roll up spine ab control mat">
-                <div class="exercise-title-row"><span class="exercise-name">The Pilates Roll-Up</span><span class="tag-free">Free Sample</span></div>
-                <p class="exercise-desc"><strong>Type:</strong> Spinal Articulation • <strong>Target:</strong> Full Rectus Abdominis & Hamstrings.</p>
-                <p class="form-cue">✓ Cue: Roll up bone-by-bone without using momentum.</p>
-            </div>
-
-            <!-- Free Sample 3 -->
-            <div class="exercise-item" data-search="swimming pilates upper back glutes posture mat">
-                <div class="exercise-title-row"><span class="exercise-name">Pilates Swimming Extension</span><span class="tag-free">Free Sample</span></div>
-                <p class="exercise-desc"><strong>Type:</strong> Posterior Chain • <strong>Target:</strong> Glutes, Lower Back & Posture Alignment.</p>
-                <p class="form-cue">✓ Cue: Flutter opposite arm and leg while breathing rhythmically.</p>
-            </div>
-
-            <!-- Vault Locked Roster (27+ More Movements) -->
+            <div class="exercise-item" data-search="pilates roll up spine ab control mat"><div class="exercise-title-row"><span class="exercise-name">The Pilates Roll-Up</span><span class="tag-free">Free Sample</span></div></div>
+            <div class="exercise-item" data-search="swimming pilates upper back glutes posture mat"><div class="exercise-title-row"><span class="exercise-name">Pilates Swimming Extension</span><span class="tag-free">Free Sample</span></div></div>
             <div class="exercise-item" data-search="criss cross obliques core pilates"><div class="exercise-title-row"><span class="exercise-name">Pilates Criss-Cross (Oblique Rotations)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="single leg stretch core pilates"><div class="exercise-title-row"><span class="exercise-name">Single-Leg Stretch</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="double leg stretch core pilates"><div class="exercise-title-row"><span class="exercise-name">Double-Leg Stretch</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="single leg circles hip mobility pilates"><div class="exercise-title-row"><span class="exercise-name">Single-Leg Circles (Hip Stabilization)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="rolling like a ball spine massage pilates"><div class="exercise-title-row"><span class="exercise-name">Rolling Like a Ball</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="the saw spine rotation pilates"><div class="exercise-title-row"><span class="exercise-name">The Saw (Spinal Rotation & Stretch)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="swan dive back extension pilates"><div class="exercise-title-row"><span class="exercise-name">Swan Dive Extension</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="side kick series outer thighs glute medius pilates"><div class="exercise-title-row"><span class="exercise-name">Side Kick Series (Glute Medius)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="the saw spine rotation pilates"><div class="exercise-title-row"><span class="exercise-name">The Saw (Spinal Rotation)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="teaser core balance pilates"><div class="exercise-title-row"><span class="exercise-name">The Pilates Teaser (V-Sit Balance)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="corkscrew lower abs core pilates"><div class="exercise-title-row"><span class="exercise-name">The Corkscrew (Lower Abdominal Control)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="shoulder bridge glutes hamstrings pilates"><div class="exercise-title-row"><span class="exercise-name">Pilates Shoulder Bridge with Leg Kicks</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="seal rolling balance spine pilates"><div class="exercise-title-row"><span class="exercise-name">The Seal (Coordination & Balance)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="plank to leg pull front core shoulders pilates"><div class="exercise-title-row"><span class="exercise-name">Leg Pull Front (Plank Hold with Lifts)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="side bend obliques shoulder stability pilates"><div class="exercise-title-row"><span class="exercise-name">Mermaid Side Stretch & Twist</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
-    <!-- Pricing Section -->
+    <!-- Membership Pricing Section -->
     <div class="membership-section" id="pricing">
         <h2>Unlock Full Vault Access</h2>
         <p style="color: var(--text-muted); font-size:0.9rem;">Get instant access to all 500+ movements, form cues & animated guides.</p>
