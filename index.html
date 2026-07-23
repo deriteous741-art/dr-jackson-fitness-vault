@@ -305,6 +305,7 @@
             margin-top: 8px;
             font-weight: 600;
             padding: 0;
+            text-decoration: none;
         }
 
         .visual-btn-locked {
@@ -434,7 +435,7 @@
             <span class="calorie-total-badge" id="totalCaloriesBadge">0 Total Cal</span>
         </div>
         <div style="margin-bottom: 8px;">
-            <button class="visual-btn" onclick="openGuide('Calorie Lookup Search', 'https://en.wikipedia.org/wiki/Calorie')">🔍 Quick Food Calorie Search ↗</button>
+            <a href="https://www.google.com/search?q=food+calorie+calculator" target="_blank" class="visual-btn">🔍 Google Food Calorie Search ↗</a>
         </div>
         <div class="meal-grid">
             <div class="meal-card"><label>🍳 Breakfast</label><input type="number" class="meal-input" placeholder="Cal" oninput="calculateCalories()"></div>
@@ -460,7 +461,6 @@
             <span class="icon">▼</span>
         </button>
         <div class="folder-content">
-            <!-- FREE SAMPLE 1 -->
             <div class="exercise-item" data-search="flat barbell bench press chest barbell gym">
                 <div class="exercise-title-row"><span class="exercise-name">Flat Barbell Bench Press</span><span class="tag-free">Free Sample</span></div>
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Mid Chest, Triceps & Front Delts.</p>
@@ -474,10 +474,9 @@
                     </div>
                     <div class="volume-badge vol-out">Total Volume: 0 lbs</div>
                 </div>
-                <button class="visual-btn" onclick="openGuide('Flat Barbell Bench Press', 'https://en.wikipedia.org/wiki/Bench_press')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=Flat+Barbell+Bench+Press+form+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
 
-            <!-- FREE SAMPLE 2 -->
             <div class="exercise-item" data-search="incline barbell bench press chest barbell gym">
                 <div class="exercise-title-row"><span class="exercise-name">Incline Barbell Bench Press (30°)</span><span class="tag-free">Free Sample</span></div>
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Clavicular Head (Upper Chest).</p>
@@ -491,10 +490,9 @@
                     </div>
                     <div class="volume-badge vol-out">Total Volume: 0 lbs</div>
                 </div>
-                <button class="visual-btn" onclick="openGuide('Incline Barbell Bench Press', 'https://en.wikipedia.org/wiki/Incline_bench_press')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=Incline+Barbell+Bench+Press+form+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
 
-            <!-- FREE SAMPLE 3 -->
             <div class="exercise-item" data-search="decline barbell bench press chest barbell gym">
                 <div class="exercise-title-row"><span class="exercise-name">Decline Barbell Bench Press</span><span class="tag-free">Free Sample</span></div>
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Lower Sternum (Lower Chest).</p>
@@ -508,10 +506,9 @@
                     </div>
                     <div class="volume-badge vol-out">Total Volume: 0 lbs</div>
                 </div>
-                <button class="visual-btn" onclick="openGuide('Decline Barbell Bench Press', 'https://en.wikipedia.org/wiki/Bench_press')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=Decline+Barbell+Bench+Press+form+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
 
-            <!-- LOCKED -->
             <div class="exercise-item" data-search="flat dumbbell chest press gym"><div class="exercise-title-row"><span class="exercise-name">Flat Dumbbell Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Flat Dumbbell Chest Press')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
             <div class="exercise-item" data-search="incline dumbbell press upper chest gym"><div class="exercise-title-row"><span class="exercise-name">Incline Dumbbell Press (45°)</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Incline Dumbbell Press')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
             <div class="exercise-item" data-search="decline dumbbell chest press gym"><div class="exercise-title-row"><span class="exercise-name">Decline Dumbbell Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Decline Dumbbell Press')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
@@ -540,7 +537,7 @@
                     </div>
                     <div class="volume-badge vol-out">Total Volume: 0 lbs</div>
                 </div>
-                <button class="visual-btn" onclick="openGuide('Standing Barbell Biceps Curl', 'https://en.wikipedia.org/wiki/Biceps_curl')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=Standing+Barbell+Biceps+Curl+form+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="triceps cable rope pushdown arms gym">
                 <div class="exercise-title-row"><span class="exercise-name">Triceps Cable Rope Pushdown</span><span class="tag-free">Free Sample</span></div>
@@ -555,7 +552,7 @@
                     </div>
                     <div class="volume-badge vol-out">Total Volume: 0 lbs</div>
                 </div>
-                <button class="visual-btn" onclick="openGuide('Triceps Cable Rope Pushdown', 'https://en.wikipedia.org/wiki/Pushdown_(exercise)')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=Triceps+Cable+Rope+Pushdown+form+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="dumbbell hammer curl brachialis forearms arms gym"><div class="exercise-title-row"><span class="exercise-name">Alternating Dumbbell Hammer Curl</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Hammer Curls')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
             <div class="exercise-item" data-search="ez bar preacher curl peak isolation gym"><div class="exercise-title-row"><span class="exercise-name">EZ-Bar Preacher Curl</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Preacher Curl')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
@@ -582,7 +579,7 @@
                     </div>
                     <div class="volume-badge vol-out">Total Volume: 0 lbs</div>
                 </div>
-                <button class="visual-btn" onclick="openGuide('Barbell Back Squat', 'https://en.wikipedia.org/wiki/Squat_(exercise)')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=Barbell+Back+Squat+form+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="romanian deadlift rdl hamstrings glutes legs gym"><div class="exercise-title-row"><span class="exercise-name">Barbell Romanian Deadlift (RDL)</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Romanian Deadlift')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
             <div class="exercise-item" data-search="leg press machine quads legs gym"><div class="exercise-title-row"><span class="exercise-name">45-Degree Machine Leg Press</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Leg Press Machine')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
@@ -609,7 +606,7 @@
                     </div>
                     <div class="volume-badge vol-out">Total Volume: 0 lbs</div>
                 </div>
-                <button class="visual-btn" onclick="openGuide('Wide-Grip Lat Pulldown', 'https://en.wikipedia.org/wiki/Pull-down_(exercise)')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=Wide+Grip+Lat+Pulldown+form+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="bent over barbell row back lats gym"><div class="exercise-title-row"><span class="exercise-name">Bent-Over Barbell Row</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Barbell Row')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
         </div>
@@ -635,7 +632,7 @@
                     </div>
                     <div class="volume-badge vol-out">Total Volume: 0 lbs</div>
                 </div>
-                <button class="visual-btn" onclick="openGuide('Eccentric Push-Up', 'https://en.wikipedia.org/wiki/Push-up')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=Eccentric+Push+Up+form+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="decline pushups feet elevated upper chest home floor"><div class="exercise-title-row"><span class="exercise-name">Decline Push-Up (Feet Elevated)</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Decline Push-Up')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
         </div>
@@ -652,7 +649,7 @@
                 <div class="exercise-title-row"><span class="exercise-name">Downward-Facing Dog (Adho Mukha)</span><span class="tag-free">Free Sample</span></div>
                 <p class="exercise-desc"><strong>Type:</strong> Inversion • <strong>Target:</strong> Hamstrings, Spine & Shoulders.</p>
                 <p class="form-cue">✓ Cue: Press floor away; drive tailbone upward.</p>
-                <button class="visual-btn" onclick="openGuide('Downward-Facing Dog', 'https://en.wikipedia.org/wiki/Downward-facing_dog')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=Downward+Facing+Dog+yoga+pose+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="childs pose balasana recovery yoga"><div class="exercise-title-row"><span class="exercise-name">Child’s Pose (Balasana)</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Child’s Pose')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
         </div>
@@ -669,21 +666,9 @@
                 <div class="exercise-title-row"><span class="exercise-name">The Classical Pilates Hundred</span><span class="tag-free">Free Sample</span></div>
                 <p class="exercise-desc"><strong>Type:</strong> Core Endurance • <strong>Target:</strong> Transverse Abdominis.</p>
                 <p class="form-cue">✓ Cue: Inhale for 5 pumps, exhale for 5 pumps.</p>
-                <button class="visual-btn" onclick="openGuide('The Pilates Hundred', 'https://en.wikipedia.org/wiki/Pilates')">🖼️ View Sample Form Guide ↗</button>
+                <a href="https://www.google.com/search?tbm=isch&q=The+Pilates+Hundred+exercise+diagram" target="_blank" class="visual-btn">🔍 View Google Image & Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="criss cross obliques core pilates"><div class="exercise-title-row"><span class="exercise-name">Pilates Criss-Cross (Oblique Rotations)</span><span class="tag-lock">Vault Locked 🔒</span></div><button class="visual-btn-locked" onclick="promptUnlock('Pilates Criss-Cross')">🔒 Unlock Log Tracker & Form Guide with Membership</button></div>
-        </div>
-    </div>
-
-    <!-- POP-UP MODAL WINDOW -->
-    <div id="guideModal" class="modal-overlay">
-        <div class="modal-card">
-            <button class="close-modal" onclick="closeModal()">&times;</button>
-            <h3 id="modalTitle" style="color: var(--primary);">Exercise Form Guide</h3>
-            <iframe id="modalFrame" class="modal-body-frame" src=""></iframe>
-            <div style="margin-top: 14px;">
-                <a href="#pricing" onclick="closeModal()" class="btn-routine-lock">⚡ Unlock All 500+ Guides & Trackers</a>
-            </div>
         </div>
     </div>
 
@@ -748,17 +733,6 @@
             const lbs = parseFloat(card.querySelector('.lbs-in').value) || 0;
             const total = sets * reps * lbs;
             card.querySelector('.vol-out').innerText = "Total Volume: " + total.toLocaleString() + " lbs";
-        }
-
-        function openGuide(name, url) {
-            document.getElementById('modalTitle').innerText = name + " Guide";
-            document.getElementById('modalFrame').src = url;
-            document.getElementById('guideModal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('guideModal').style.display = 'none';
-            document.getElementById('modalFrame').src = '';
         }
 
         function promptUnlock(name) {
