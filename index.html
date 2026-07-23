@@ -1,5 +1,4 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,6 +66,41 @@
 
         .search-bar:focus {
             border-color: var(--primary);
+        }
+
+        /* Routine Builder Card */
+        .routine-builder-box {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 2px dashed var(--primary);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .routine-builder-box h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+
+        .routine-builder-box p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            margin-bottom: 12px;
+        }
+
+        .btn-routine-lock {
+            background: rgba(217, 119, 6, 0.2);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .category-folder {
@@ -167,6 +201,20 @@
             font-weight: 500;
         }
 
+        /* External Visual Hyperlinks */
+        .visual-link {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-decoration: none;
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        .visual-link:hover {
+            text-decoration: underline;
+        }
+
         /* Membership Pricing Section */
         .membership-section {
             background: linear-gradient(135deg, #1e293b, #0f172a);
@@ -185,7 +233,7 @@
 
         .price-options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 12px;
             margin-top: 16px;
         }
@@ -202,7 +250,7 @@
         }
 
         .price-amount {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
             color: var(--primary);
             margin: 6px 0;
@@ -214,10 +262,10 @@
             background: var(--paypal-yellow);
             color: #000000;
             border: none;
-            padding: 12px;
+            padding: 10px;
             border-radius: 6px;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-decoration: none;
             margin-top: 10px;
             transition: background 0.2s ease;
@@ -232,11 +280,18 @@
 
     <header>
         <h1>Dr. Jackson Fitness Vault</h1>
-        <p class="subtitle">Complete Master Exercise Library</p>
+        <p class="subtitle">Complete Exercise Vault & Custom Routine Builder</p>
     </header>
 
     <div class="search-container">
         <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Search exercises, muscles, or movements..." onkeyup="filterExercises()">
+    </div>
+
+    <!-- CUSTOM ROUTINE BUILDER PAYWALL TEASER -->
+    <div class="routine-builder-box">
+        <h3>📋 Custom Routine Builder (Vault VIP Feature)</h3>
+        <p>Build, save, and share personalized workout routines for you and your gym partners.</p>
+        <a href="#pricing" class="btn-routine-lock">🔒 Unlock Routine Builder with VIP Access</a>
     </div>
 
     <!-- CHEST -->
@@ -250,6 +305,7 @@
                 <div class="exercise-title-row"><span class="exercise-name">Flat Barbell Bench Press</span><span class="tag-free">Free Sample</span></div>
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Mid Chest, Triceps & Front Delts.</p>
                 <p class="form-cue">✓ Cue: Retract scapula; drive feet firmly into floor.</p>
+                <a href="https://en.wikipedia.org/wiki/Bench_press#/media/File:Bench-press-1.svg" target="_blank" class="visual-link">🖼️ View Start/Finish Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="incline barbell bench press chest barbell gym">
                 <div class="exercise-title-row"><span class="exercise-name">Incline Barbell Bench Press (30°)</span><span class="tag-free">Free Sample</span></div>
@@ -259,10 +315,6 @@
             <div class="exercise-item" data-search="decline barbell bench press chest barbell gym"><div class="exercise-title-row"><span class="exercise-name">Decline Barbell Bench Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="flat dumbbell chest press gym"><div class="exercise-title-row"><span class="exercise-name">Flat Dumbbell Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="incline dumbbell press upper chest gym"><div class="exercise-title-row"><span class="exercise-name">Incline Dumbbell Press (45°)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="decline dumbbell chest press gym"><div class="exercise-title-row"><span class="exercise-name">Decline Dumbbell Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="flat dumbbell chest flyes stretch pecs gym"><div class="exercise-title-row"><span class="exercise-name">Flat Dumbbell Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="incline dumbbell chest flyes upper pecs gym"><div class="exercise-title-row"><span class="exercise-name">Incline Dumbbell Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="standing cable chest flyes crossover middle pecs gym"><div class="exercise-title-row"><span class="exercise-name">Standing Cable Chest Flyes (Mid-Pulley)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -277,12 +329,10 @@
                 <div class="exercise-title-row"><span class="exercise-name">Standing Barbell Biceps Curl</span><span class="tag-free">Free Sample</span></div>
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Biceps Brachii Mass.</p>
                 <p class="form-cue">✓ Cue: Keep elbows pinned to ribs; strict tension.</p>
+                <a href="https://en.wikipedia.org/wiki/Biceps_curl#/media/File:Biceps-curl-1.svg" target="_blank" class="visual-link">🖼️ View Visual Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="triceps cable rope pushdown arms gym"><div class="exercise-title-row"><span class="exercise-name">Triceps Cable Rope Pushdown</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="dumbbell hammer curl brachialis forearms arms gym"><div class="exercise-title-row"><span class="exercise-name">Alternating Dumbbell Hammer Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="ez bar biceps curl gym"><div class="exercise-title-row"><span class="exercise-name">Standing EZ-Bar Biceps Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="ez bar preacher curl peak isolation gym"><div class="exercise-title-row"><span class="exercise-name">EZ-Bar Preacher Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="lying ez bar skull crushers triceps gym"><div class="exercise-title-row"><span class="exercise-name">Lying EZ-Bar Skull Crushers</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -297,11 +347,10 @@
                 <div class="exercise-title-row"><span class="exercise-name">Barbell High-Bar Back Squat</span><span class="tag-free">Free Sample</span></div>
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Quadriceps & Glute Mass.</p>
                 <p class="form-cue">✓ Cue: Drive knees outward inline with toes; drop parallel.</p>
+                <a href="https://en.wikipedia.org/wiki/Squat_(exercise)#/media/File:Squat-1.svg" target="_blank" class="visual-link">🖼️ View Visual Form Guide ↗</a>
             </div>
             <div class="exercise-item" data-search="romanian deadlift rdl hamstrings glutes legs gym"><div class="exercise-title-row"><span class="exercise-name">Barbell Romanian Deadlift (RDL)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="leg press machine quads legs gym"><div class="exercise-title-row"><span class="exercise-name">45-Degree Machine Leg Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="barbell front squat quads core gym"><div class="exercise-title-row"><span class="exercise-name">Barbell Front Squat</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="bulgarian split squat dumbbell quads glutes gym home"><div class="exercise-title-row"><span class="exercise-name">Dumbbell Bulgarian Split Squat</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -318,9 +367,6 @@
                 <p class="form-cue">✓ Cue: Pull bar to upper chest, driving elbows down.</p>
             </div>
             <div class="exercise-item" data-search="bent over barbell row back lats gym"><div class="exercise-title-row"><span class="exercise-name">Bent-Over Barbell Row</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="overhead barbell military press shoulders delts gym"><div class="exercise-title-row"><span class="exercise-name">Standing Overhead Barbell Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="single arm dumbbell row back lats gym home"><div class="exercise-title-row"><span class="exercise-name">Single-Arm Dumbbell Row</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="dumbbell lateral raises side delts width gym home"><div class="exercise-title-row"><span class="exercise-name">Dumbbell Lateral Raise</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -337,7 +383,6 @@
                 <p class="form-cue">✓ Cue: Lower over 3 seconds, explode upward.</p>
             </div>
             <div class="exercise-item" data-search="decline pushups feet elevated upper chest home floor"><div class="exercise-title-row"><span class="exercise-name">Decline Push-Up (Feet Elevated)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="diamond pushups inner chest triceps home floor"><div class="exercise-title-row"><span class="exercise-name">Diamond Push-Up (Triceps Focus)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -353,8 +398,6 @@
                 <p class="exercise-desc"><strong>Type:</strong> Inversion • <strong>Target:</strong> Hamstrings, Spine & Shoulders.</p>
                 <p class="form-cue">✓ Cue: Press floor away; drive tailbone upward.</p>
             </div>
-            <div class="exercise-item" data-search="warrior II pose virabhadrasana yoga balance legs"><div class="exercise-title-row"><span class="exercise-name">Warrior II Pose</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="cobra pose bhujangasana spine back stretch yoga"><div class="exercise-title-row"><span class="exercise-name">Cobra Pose (Bhujangasana)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -370,15 +413,13 @@
                 <p class="exercise-desc"><strong>Type:</strong> Core Endurance • <strong>Target:</strong> Transverse Abdominis.</p>
                 <p class="form-cue">✓ Cue: Inhale for 5 pumps, exhale for 5 pumps.</p>
             </div>
-            <div class="exercise-item" data-search="pilates roll up spine ab control mat"><div class="exercise-title-row"><span class="exercise-name">The Pilates Roll-Up</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="swimming pilates upper back glutes posture mat"><div class="exercise-title-row"><span class="exercise-name">Pilates Swimming Extension</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
-    <!-- MEMBERSHIP PRICING SECTION WITH LIVE PAYPAL LINKS -->
+    <!-- MEMBERSHIP PRICING SECTION -->
     <div class="membership-section" id="pricing">
         <h2>Unlock Full Vault Access</h2>
-        <p style="color: var(--text-muted); font-size:0.9rem;">Get instant access to all movements, form cues & workouts via PayPal.</p>
+        <p style="color: var(--text-muted); font-size:0.9rem;">Get instant access to all movements, custom routine builder & workout sharing via PayPal.</p>
 
         <div class="price-options">
             <div class="price-card">
@@ -392,6 +433,12 @@
                 <div style="margin-top:4px;">Annual VIP</div>
                 <div class="price-amount">$20.00<span style="font-size:0.8rem; font-weight:normal;">/yr</span></div>
                 <a href="https://www.paypal.com/ncp/payment/S5P6A2VPNZPSS" class="paypal-btn" target="_blank">Pay with PayPal</a>
+            </div>
+
+            <div class="price-card">
+                <span>Add-A-Friend Pass</span>
+                <div class="price-amount">$4.99<span style="font-size:0.8rem; font-weight:normal;">/mo</span></div>
+                <a href="https://www.paypal.com/ncp/payment/FVD45CJ8653US" class="paypal-btn" target="_blank">Add Partner Pass</a>
             </div>
 
             <div class="price-card">
@@ -450,5 +497,4 @@
         }
     </script>
 </body>
-</html>    
-       
+</html>
