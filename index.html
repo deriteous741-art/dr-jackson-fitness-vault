@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Jackson Fitness Vault - Complete Exercise Library</title>
+    <style>
+        :root {
+            --primary: #d97706;
+            --primary-dark: #b45309;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --accent: #22c55e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Search & Filter Section */
+        .controls-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-bar:focus {
+            border-color: var(--primary);
+        }
+
+        .category-filter {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+
+        /* Exercise Grid */
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .exercise-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge {
+            align-self: flex-start;
+            background: rgba(217, 119, 6, 0.2);
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .badge-free {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--accent);
+        }
+
+        .exercise-title {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .exercise-details {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .form-cue {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Locked Items Styling */
+        .card-locked {
+            filter: blur(3px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .lock-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.88);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .unlock-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .unlock-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Pricing Section */
+        .membership-section {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid var(--primary);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .membership-section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .price-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-card.featured {
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(217, 119, 6, 0.2);
+        }
+
+        .price-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .price-amount {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+
+        .buy-btn {
+            width: 100%;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .buy-btn:hover {
+            background: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dr. Jackson Fitness Vault</h1>
+        <p class="subtitle">Complete Master Library: Gym, Home, Yoga & Pilates</p>
+    </header>
+
+    <div class="controls-container">
+        <!-- Search Bar -->
+        <input type="text" id="searchInput" class="search-bar" placeholder="Search exercises (e.g. Squat, Core, Hamstrings, Yoga)..." onkeyup="filterExercises()">
+        
+        <!-- Category Filter Tabs -->
+        <div class="category-filter">
+            <button class="filter-btn active" onclick="setCategory('all', this)">All Movements</button>
+            <button class="filter-btn" onclick="setCategory('gym', this)">🏋️ Gym & Strength</button>
+            <button class="filter-btn" onclick="setCategory('home', this)">🏠 Home & Bodyweight</button>
+            <button class="filter-btn" onclick="setCategory('yoga', this)">🧘 Yoga & Mobility</button>
+            <button class="filter-btn" onclick="setCategory('pilates', this)">🤸 Pilates & Core</button>
+        </div>
+    </div>
+
+    <!-- Exercise Grid Container -->
+    <div class="exercise-grid" id="exerciseGrid">
+
+        <!-- GYM EXERCISES -->
+        <div class="exercise-card" data-category="gym" data-search="barbell deadlift hamstrings glutes strength gym">
+            <div>
+                <span class="badge badge-free">Gym • Free Sample</span>
+                <h2 class="exercise-title">Barbell Romanian Deadlift</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Hamstrings & Glutes<br>
+                    <strong>Setup:</strong> Stand hip-width apart holding barbell at thighs. Hinge back at hips with slight knee bend.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Keep bar against shins; stop when hips stop moving back.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="dumbbell chest press bench push strength gym">
+            <div>
+                <span class="badge badge-free">Gym • Free Sample</span>
+                <h2 class="exercise-title">Incline Dumbbell Bench Press</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Upper Chest & Front Deltoids<br>
+                    <strong>Setup:</strong> Bench at 30 degrees. Press dumbbells straight up, retracting shoulder blades.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Keep elbows tucked at 45 degrees to protect shoulders.</p>
+        </div>
+
+        <!-- HOME EXERCISES -->
+        <div class="exercise-card" data-category="home" data-search="tempo pushup chest triceps home bodyweight">
+            <div>
+                <span class="badge badge-free">Home • Free Sample</span>
+                <h2 class="exercise-title">3-Second Eccentric Push-Up</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Chest, Core & Triceps<br>
+                    <strong>Setup:</strong> Full plank position. Lower chest over 3 full seconds, explosive drive upwards.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Squeeze glutes to maintain rigid spine throughout.</p>
+        </div>
+
+        <div class="exercise-card" data-category="home" data-search="bulgarian split squat legs quads bodyweight home">
+            <div>
+                <span class="badge badge-free">Home • Free Sample</span>
+                <h2 class="exercise-title">Bodyweight Bulgarian Split Squat</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Quadriceps & Glute Medius<br>
+                    <strong>Setup:</strong> Rear foot elevated on chair or couch. Lower front hip until thigh is parallel to ground.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Keep front foot flat and press through middle foot.</p>
+        </div>
+
+        <!-- YOGA EXERCISES -->
+        <div class="exercise-card" data-category="yoga" data-search="downward facing dog mobility flexibility yoga stretch">
+            <div>
+                <span class="badge badge-free">Yoga • Free Sample</span>
+                <h2 class="exercise-title">Downward-Facing Dog (Adho Mukha)</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Posterior Chain, Shoulders & Spine<br>
+                    <strong>Setup:</strong> Hands shoulder-width, press floor away while driving hips up and back.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Bend knees slightly if hamstrings pull lower back into rounding.</p>
+        </div>
+
+        <div class="exercise-card" data-category="yoga" data-search="warrior posture hips balance stretch yoga">
+            <div>
+                <span class="badge badge-free">Yoga • Free Sample</span>
+                <h2 class="exercise-title">Warrior II Pose (Virabhadrasana II)</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Hip Openers & Quadriceps Endurance<br>
+                    <strong>Setup:</strong> Step feet wide, front knee bent 90 degrees over ankle, arms extended parallel to floor.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Track front knee outward over second toe.</p>
+        </div>
+
+        <!-- PILATES EXERCISES -->
+        <div class="exercise-card" data-category="pilates" data-search="pilates hundred core stamina endurance mat">
+            <div>
+                <span class="badge badge-free">Pilates • Free Sample</span>
+                <h2 class="exercise-title">The Pilates Hundred</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Deep Transverse Abdominis & Breath Control<br>
+                    <strong>Setup:</strong> Lie flat, raise legs to tabletop, curl head/shoulders up, pump arms vigorously for 100 beats.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Inhale for 5 pumps, exhale for 5 pumps.</p>
+        </div>
+
+        <!-- LOCKED PREMIUM EXERCISES -->
+        <div class="exercise-card" data-category="gym" data-search="barbell back squat legs strength gym">
+            <div class="card-locked">
+                <span class="badge">Gym • Premium</span>
+                <h2 class="exercise-title">Barbell High-Bar Back Squat</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Quads, Glutes & Spinal Erectors<br>
+                    <strong>Setup:</strong> Bar resting across upper traps. Break at hips and knees simultaneously.
+                </p>
+            </div>
+            <div class="lock-overlay">
+                🔒 <strong>Full Library Locked</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Unlock 500+ movements</p>
+                <button class="unlock-btn" onclick="scrollToPricing()">Unlock All ($3.99/mo)</button>
+            </div>
+        </div>
+
+        <div class="exercise-card" data-category="pilates" data-search="criss cross obliques core pilates mat">
+            <div class="card-locked">
+                <span class="badge">Pilates • Premium</span>
+                <h2 class="exercise-title">Pilates Criss-Cross Oblique Rotations</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Internal & External Obliques<br>
+                    <strong>Setup:</strong> Hands behind head, rotate shoulder to opposite knee while extending non-working leg.
+                </p>
+            </div>
+            <div class="lock-overlay">
+                🔒 <strong>Full Library Locked</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Unlock 500+ movements</p>
+                <button class="unlock-btn" onclick="scrollToPricing()">Unlock All ($3.99/mo)</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Membership Pricing Section -->
+    <div class="membership-section" id="pricing">
+        <h2>Unlock the Complete Exercise Vault</h2>
+        <p style="color: var(--text-muted);">Choose your membership plan to access all 500+ exercises, form cues, and workout programs.</p>
+        
+        <div class="price-options">
+            <!-- Tier 1: Monthly -->
+            <div class="price-card">
+                <div>
+                    <span class="price-title">Monthly Pass</span>
+                    <div class="price-amount">$3.99<span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">/mo</span></div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Full library access. Cancel anytime.</p>
+                </div>
+                <!-- Replace YOUR_STRIPE_MONTHLY_LINK with your Stripe Payment Link -->
+                <a href="YOUR_STRIPE_MONTHLY_LINK" class="buy-btn">Get Monthly Pass</a>
+            </div>
+
+            <!-- Tier 2: Annual VIP -->
+            <div class="price-card featured">
+                <div>
+                    <span class="badge">BEST VALUE</span>
+                    <span class="price-title" style="display:block; margin-top:5px;">Annual VIP</span>
+                    <div class="price-amount">$20.00<span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">/yr</span></div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Save ~58% over monthly pricing.</p>
+                </div>
+                <!-- Replace YOUR_STRIPE_ANNUAL_LINK with your Stripe Payment Link -->
+                <a href="YOUR_STRIPE_ANNUAL_LINK" class="buy-btn">Get Annual VIP</a>
+            </div>
+
+            <!-- Tier 3: Lifetime -->
+            <div class="price-card">
+                <div>
+                    <span class="price-title">Lifetime Founder</span>
+                    <div class="price-amount">$80.00</div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">One-time payment. Permanent access.</p>
+                </div>
+                <!-- Replace YOUR_STRIPE_LIFETIME_LINK with your Stripe Payment Link -->
+                <a href="YOUR_STRIPE_LIFETIME_LINK" class="buy-btn">Get Lifetime Access</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Category Filter Logic
+        function setCategory(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.exercise-card');
+            cards.forEach(card => {
+                if (cat === 'all' || card.getAttribute('data-category') === cat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Live Search Filter Logic
+        function filterExercises() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.exercise-card');
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-search').toLowerCase();
+                if (searchData.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Smooth Scroll to Pricing
+        function scrollToPricing() {
+            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
