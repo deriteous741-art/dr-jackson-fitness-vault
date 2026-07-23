@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Jackson Fitness Vault - Complete Library</title>
+    <title>Dr. Jackson Fitness Vault - Master Library</title>
     <style>
         :root {
             --primary: #d97706;
@@ -112,7 +112,7 @@
             padding: 0 16px;
         }
 
-        /* Exercise Items & Real Motion Graphics */
+        /* Exercise Items & Visual Media */
         .exercise-item {
             border-bottom: 1px solid var(--border);
             padding: 14px 0;
@@ -151,31 +151,36 @@
             font-weight: bold;
         }
 
-        /* Animated Full-Body Player Container */
-        .demo-player-box {
-            margin: 12px 0;
-            background: #0f172a;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 12px;
+        /* Visual Picture Deck (Start/Finish Frames) */
+        .visual-frame-box {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+            overflow-x: auto;
         }
 
-        .demo-gif {
-            width: 100%;
-            max-width: 280px;
-            height: auto;
+        .frame-card {
+            background: #0f172a;
+            border: 1px solid var(--border);
             border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .frame-img {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 4px;
             background: #1e293b;
         }
 
-        .demo-caption {
-            font-size: 0.78rem;
+        .frame-label {
+            font-size: 0.75rem;
             color: var(--primary);
-            margin-top: 6px;
+            margin-top: 4px;
             font-weight: bold;
         }
 
@@ -252,14 +257,14 @@
 
     <header>
         <h1>Dr. Jackson Fitness Vault</h1>
-        <p class="subtitle">Complete Library with Real Animated Body Guides</p>
+        <p class="subtitle">Complete Library with Visual Form Guides</p>
     </header>
 
     <div class="search-container">
         <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Search any exercise, muscle, or movement..." onkeyup="filterExercises()">
     </div>
 
-    <!-- ==================== CATEGORY 1: CHEST (30+ EXERCISES) ==================== -->
+    <!-- ==================== CATEGORY 1: CHEST ==================== -->
     <div class="category-folder">
         <button class="folder-header" onclick="toggleFolder(this)">
             <span>🏋️ Chest Vault (Presses, Flyes & Pullovers)</span>
@@ -269,10 +274,16 @@
             <div class="exercise-item" data-search="flat barbell bench press chest barbell gym">
                 <div class="exercise-title-row"><span class="exercise-name">Flat Barbell Bench Press</span><span class="tag-free">Free Sample</span></div>
                 
-                <!-- Real Full-Body Animated Demo Player -->
-                <div class="demo-player-box">
-                    <img class="demo-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHJocDRjcm93MWtjeW8zeGZocXZhZWg5bm8xM24xaWV5cGswYzB4diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKRnoK17hMAM6uQ/giphy.gif" alt="Barbell Bench Press Animation" loading="lazy">
-                    <div class="demo-caption">🎥 Real-Time Full Body Form Demo</div>
+                <!-- Start / Finish Frame Card Deck -->
+                <div class="visual-frame-box">
+                    <div class="frame-card">
+                        <img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bench-press-1.svg/500px-Bench-press-1.svg.png" alt="Bench Press Start Position">
+                        <div class="frame-label">1. Start / Stretch</div>
+                    </div>
+                    <div class="frame-card">
+                        <img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bench-press-2.svg/500px-Bench-press-2.svg.png" alt="Bench Press Lockout Position">
+                        <div class="frame-label">2. Lockout / Peak</div>
+                    </div>
                 </div>
 
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Mid Chest, Triceps & Front Delts.</p>
@@ -291,16 +302,11 @@
             </div>
             <div class="exercise-item" data-search="flat dumbbell chest press gym"><div class="exercise-title-row"><span class="exercise-name">Flat Dumbbell Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="incline dumbbell press upper chest gym"><div class="exercise-title-row"><span class="exercise-name">Incline Dumbbell Press (45°)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="decline dumbbell chest press gym"><div class="exercise-title-row"><span class="exercise-name">Decline Dumbbell Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="flat dumbbell chest flyes stretch pecs gym"><div class="exercise-title-row"><span class="exercise-name">Flat Dumbbell Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="incline dumbbell chest flyes upper pecs gym"><div class="exercise-title-row"><span class="exercise-name">Incline Dumbbell Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="standing cable chest flyes crossover middle pecs gym"><div class="exercise-title-row"><span class="exercise-name">Standing Cable Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="pec deck machine chest flyes gym"><div class="exercise-title-row"><span class="exercise-name">Pec Deck Machine Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="chest dips bodyweight lower pecs gym home"><div class="exercise-title-row"><span class="exercise-name">Chest Dips (Bodyweight or Weighted)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
-    <!-- ==================== CATEGORY 2: ARMS (30+ EXERCISES) ==================== -->
+    <!-- ==================== CATEGORY 2: ARMS ==================== -->
     <div class="category-folder">
         <button class="folder-header" onclick="toggleFolder(this)">
             <span>💪 Arms Vault (Biceps, Triceps & Forearms)</span>
@@ -309,6 +315,18 @@
         <div class="folder-content">
             <div class="exercise-item" data-search="barbell biceps curl arms gym">
                 <div class="exercise-title-row"><span class="exercise-name">Standing Barbell Biceps Curl</span><span class="tag-free">Free Sample</span></div>
+                
+                <div class="visual-frame-box">
+                    <div class="frame-card">
+                        <img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Biceps-curl-1.svg/500px-Biceps-curl-1.svg.png" alt="Biceps Curl Start">
+                        <div class="frame-label">1. Extended Start</div>
+                    </div>
+                    <div class="frame-card">
+                        <img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Biceps-curl-2.svg/500px-Biceps-curl-2.svg.png" alt="Biceps Curl Peak">
+                        <div class="frame-label">2. Peak Squeeze</div>
+                    </div>
+                </div>
+
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Biceps Brachii Mass.</p>
                 <p class="form-cue">✓ Cue: Keep elbows pinned to ribs; strict tension.</p>
             </div>
@@ -322,13 +340,10 @@
                 <p class="exercise-desc"><strong>Type:</strong> Dumbbell / Gym • <strong>Target:</strong> Brachialis & Forearm Thickness.</p>
                 <p class="form-cue">✓ Cue: Keep palms facing inward throughout.</p>
             </div>
-            <div class="exercise-item" data-search="ez bar biceps curl gym"><div class="exercise-title-row"><span class="exercise-name">Standing EZ-Bar Biceps Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="ez bar preacher curl peak isolation gym"><div class="exercise-title-row"><span class="exercise-name">EZ-Bar Preacher Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="lying ez bar skull crushers triceps gym"><div class="exercise-title-row"><span class="exercise-name">Lying EZ-Bar Skull Crushers</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
-    <!-- ==================== CATEGORY 3: LEGS (30+ EXERCISES) ==================== -->
+    <!-- ==================== CATEGORY 3: LEGS ==================== -->
     <div class="category-folder">
         <button class="folder-header" onclick="toggleFolder(this)">
             <span>🦵 Leg Day Vault (Quads, Hamstrings, Glutes & Calves)</span>
@@ -337,6 +352,18 @@
         <div class="folder-content">
             <div class="exercise-item" data-search="barbell back squat quads glutes legs gym">
                 <div class="exercise-title-row"><span class="exercise-name">Barbell High-Bar Back Squat</span><span class="tag-free">Free Sample</span></div>
+                
+                <div class="visual-frame-box">
+                    <div class="frame-card">
+                        <img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Squat-1.svg/500px-Squat-1.svg.png" alt="Squat Setup">
+                        <div class="frame-label">1. Upright Setup</div>
+                    </div>
+                    <div class="frame-card">
+                        <img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Squat-2.svg/500px-Squat-2.svg.png" alt="Squat Parallel Depth">
+                        <div class="frame-label">2. Parallel Depth</div>
+                    </div>
+                </div>
+
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Quadriceps & Glute Mass.</p>
                 <p class="form-cue">✓ Cue: Drive knees outward inline with toes; drop parallel.</p>
             </div>
@@ -350,8 +377,6 @@
                 <p class="exercise-desc"><strong>Type:</strong> Machine / Gym • <strong>Target:</strong> Overall Quad Volume.</p>
                 <p class="form-cue">✓ Cue: Keep lower back flat against pad; do not lock knees.</p>
             </div>
-            <div class="exercise-item" data-search="bulgarian split squat dumbbell quads glutes gym home"><div class="exercise-title-row"><span class="exercise-name">Dumbbell Bulgarian Split Squat</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="barbell hip thrust glutes gym"><div class="exercise-title-row"><span class="exercise-name">Barbell Hip Thrust</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -377,8 +402,6 @@
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Front & Side Deltoids.</p>
                 <p class="form-cue">✓ Cue: Press bar straight overhead; lock out over crown.</p>
             </div>
-            <div class="exercise-item" data-search="single arm dumbbell row back lats gym home"><div class="exercise-title-row"><span class="exercise-name">Single-Arm Dumbbell Row</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="dumbbell lateral raises side delts width gym home"><div class="exercise-title-row"><span class="exercise-name">Dumbbell Lateral Raise</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -396,7 +419,6 @@
             </div>
             <div class="exercise-item" data-search="warrior II pose virabhadrasana yoga balance legs"><div class="exercise-title-row"><span class="exercise-name">Warrior II Pose (Virabhadrasana II)</span><span class="tag-free">Free Sample</span></div></div>
             <div class="exercise-item" data-search="cobra pose bhujangasana spine back stretch yoga"><div class="exercise-title-row"><span class="exercise-name">Cobra Pose (Bhujangasana)</span><span class="tag-free">Free Sample</span></div></div>
-            <div class="exercise-item" data-search="pigeon pose hip opener yoga"><div class="exercise-title-row"><span class="exercise-name">Deep Pigeon Pose (Glute & Hip Opener)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -414,14 +436,13 @@
             </div>
             <div class="exercise-item" data-search="pilates roll up spine ab control mat"><div class="exercise-title-row"><span class="exercise-name">The Pilates Roll-Up</span><span class="tag-free">Free Sample</span></div></div>
             <div class="exercise-item" data-search="swimming pilates upper back glutes posture mat"><div class="exercise-title-row"><span class="exercise-name">Pilates Swimming Extension</span><span class="tag-free">Free Sample</span></div></div>
-            <div class="exercise-item" data-search="criss cross obliques core pilates"><div class="exercise-title-row"><span class="exercise-name">Pilates Criss-Cross (Oblique Rotations)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
     <!-- Membership Pricing Section -->
     <div class="membership-section" id="pricing">
         <h2>Unlock Full Vault Access</h2>
-        <p style="color: var(--text-muted); font-size:0.9rem;">Get instant access to all 500+ movements, form cues & animated body guides.</p>
+        <p style="color: var(--text-muted); font-size:0.9rem;">Get instant access to all 500+ movements, form cues & visual guides.</p>
 
         <div class="price-options">
             <div class="price-card">
