@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Jackson Fitness Vault - Complete Exercise Library</title>
+    <title>Dr. Jackson Fitness Vault - Master Exercise Library</title>
     <style>
         :root {
             --primary: #d97706;
@@ -48,7 +49,7 @@
             font-size: 1rem;
         }
 
-        /* Search & Filter Section */
+        /* Controls */
         .controls-container {
             display: flex;
             flex-direction: column;
@@ -58,7 +59,7 @@
 
         .search-bar {
             width: 100%;
-            padding: 12px 18px;
+            padding: 14px 18px;
             border-radius: 10px;
             border: 1px solid var(--border);
             background: var(--card-bg);
@@ -75,7 +76,7 @@
             display: flex;
             gap: 10px;
             overflow-x: auto;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
         }
 
         .filter-btn {
@@ -262,7 +263,7 @@
 
     <div class="controls-container">
         <!-- Search Bar -->
-        <input type="text" id="searchInput" class="search-bar" placeholder="Search exercises (e.g. Squat, Core, Hamstrings, Yoga)..." onkeyup="filterExercises()">
+        <input type="text" id="searchInput" class="search-bar" placeholder="Search by exercise or muscle (e.g. Bench, Biceps, Legs, Shoulders, Yoga)..." onkeyup="filterExercises()">
         
         <!-- Category Filter Tabs -->
         <div class="category-filter">
@@ -277,102 +278,393 @@
     <!-- Exercise Grid Container -->
     <div class="exercise-grid" id="exerciseGrid">
 
-        <!-- GYM EXERCISES -->
-        <div class="exercise-card" data-category="gym" data-search="barbell deadlift hamstrings glutes strength gym">
+        <!-- ==================== GYM & STRENGTH: CHEST ==================== -->
+        <div class="exercise-card" data-category="gym" data-search="flat barbell bench press chest strength gym">
             <div>
-                <span class="badge badge-free">Gym • Free Sample</span>
-                <h2 class="exercise-title">Barbell Romanian Deadlift</h2>
+                <span class="badge badge-free">Gym • Chest</span>
+                <h2 class="exercise-title">Flat Barbell Bench Press</h2>
                 <p class="exercise-details">
-                    <strong>Target:</strong> Hamstrings & Glutes<br>
-                    <strong>Setup:</strong> Stand hip-width apart holding barbell at thighs. Hinge back at hips with slight knee bend.
+                    <strong>Target:</strong> Mid Chest, Triceps & Front Delts<br>
+                    <strong>Execution:</strong> Lie flat, plant feet, grip bar shoulder-width wide. Lower to mid-sternum, drive up.
                 </p>
             </div>
-            <p class="form-cue">✓ Form Cue: Keep bar against shins; stop when hips stop moving back.</p>
+            <p class="form-cue">✓ Form Cue: Retract scapula; maintain arch in lower back.</p>
         </div>
 
-        <div class="exercise-card" data-category="gym" data-search="dumbbell chest press bench push strength gym">
+        <div class="exercise-card" data-category="gym" data-search="incline barbell bench press upper chest strength gym">
             <div>
-                <span class="badge badge-free">Gym • Free Sample</span>
-                <h2 class="exercise-title">Incline Dumbbell Bench Press</h2>
+                <span class="badge badge-free">Gym • Chest</span>
+                <h2 class="exercise-title">Incline Barbell Bench Press</h2>
                 <p class="exercise-details">
-                    <strong>Target:</strong> Upper Chest & Front Deltoids<br>
-                    <strong>Setup:</strong> Bench at 30 degrees. Press dumbbells straight up, retracting shoulder blades.
+                    <strong>Target:</strong> Clavicular Head (Upper Chest)<br>
+                    <strong>Execution:</strong> Set bench to 30° angle. Lower bar under control to collarbone level, press vertically.
                 </p>
             </div>
-            <p class="form-cue">✓ Form Cue: Keep elbows tucked at 45 degrees to protect shoulders.</p>
+            <p class="form-cue">✓ Form Cue: Keep elbows tucked 45° from torso.</p>
         </div>
 
-        <!-- HOME EXERCISES -->
-        <div class="exercise-card" data-category="home" data-search="tempo pushup chest triceps home bodyweight">
+        <div class="exercise-card" data-category="gym" data-search="decline barbell bench press lower chest strength gym">
             <div>
-                <span class="badge badge-free">Home • Free Sample</span>
+                <span class="badge badge-free">Gym • Chest</span>
+                <h2 class="exercise-title">Decline Barbell Bench Press</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Sternal Head (Lower Chest)<br>
+                    <strong>Execution:</strong> Hook feet into decline bench. Lower bar controlled to lower sternum, drive upward.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Squeeze chest at peak contraction without locking elbows violently.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="incline dumbbell press upper chest hypertrophy gym">
+            <div>
+                <span class="badge badge-free">Gym • Chest</span>
+                <h2 class="exercise-title">Incline Dumbbell Press</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Upper Chest & Stability<br>
+                    <strong>Execution:</strong> Bench at 30–45°. Press dumbbells up along a slight arc, bringing them close at top.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Full stretch at the bottom without over-rotating shoulders.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="flat dumbbell press chest strength gym">
+            <div>
+                <span class="badge badge-free">Gym • Chest</span>
+                <h2 class="exercise-title">Flat Dumbbell Chest Press</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Mid Chest Isolation<br>
+                    <strong>Execution:</strong> Press dumbbells straight up over mid-chest, lowering until elbows drop past bench level.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Keep wrists stacked directly above elbows.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="cable chest flyes crossover pecs hypertrophy gym">
+            <div>
+                <span class="badge badge-free">Gym • Chest</span>
+                <h2 class="exercise-title">Standing Cable Chest Flyes</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Pectoral Isolation & Inner Squeeze<br>
+                    <strong>Execution:</strong> Set pulleys high. Hug arms forward in a wide arc until hands meet at chest level.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Slight bend in elbows; move from the shoulder joint only.</p>
+        </div>
+
+        <!-- ==================== GYM & STRENGTH: ARMS ==================== -->
+        <div class="exercise-card" data-category="gym" data-search="barbell biceps curl arms hypertrophy gym">
+            <div>
+                <span class="badge badge-free">Gym • Arms</span>
+                <h2 class="exercise-title">Standing Barbell Biceps Curl</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Biceps Brachii (Short & Long Heads)<br>
+                    <strong>Execution:</strong> Underhand grip, pin elbows to ribs. Curl bar toward shoulders, pause, lower slowly.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Do not swing hips or lean back at the top.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="dumbbell hammer curl arms brachialis forearms gym">
+            <div>
+                <span class="badge badge-free">Gym • Arms</span>
+                <h2 class="exercise-title">Alternating Dumbbell Hammer Curl</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Brachialis & Forearms (Grip Thickness)<br>
+                    <strong>Execution:</strong> Neutral grip (palms facing inward). Curl dumbbell straight up toward shoulder.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Keep wrists neutral without curling palm inward.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="triceps rope pushdown cable arms hypertrophy gym">
+            <div>
+                <span class="badge badge-free">Gym • Arms</span>
+                <h2 class="exercise-title">Triceps Cable Rope Pushdown</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Lateral & Medial Triceps Heads<br>
+                    <strong>Execution:</strong> High cable pulley. Extend arms downward, spreading rope handles apart at bottom.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Lock elbows at side; avoid letting shoulders rise.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="ez bar skull crushers triceps extensions arms gym">
+            <div>
+                <span class="badge badge-free">Gym • Arms</span>
+                <h2 class="exercise-title">Lying EZ-Bar Skull Crushers</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Long Head Triceps<br>
+                    <strong>Execution:</strong> Flat bench. Lower EZ-bar toward forehead or slightly behind head, extend fully.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Keep upper arms pointed straight up throughout movement.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="preacher curl EZ bar biceps isolation arms gym">
+            <div>
+                <span class="badge badge-free">Gym • Arms</span>
+                <h2 class="exercise-title">EZ-Bar Preacher Curl</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Biceps Peak Isolation<br>
+                    <strong>Execution:</strong> Arms braced on preacher pad. Lower bar until arms are almost extended, curl upward.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Control negative; avoid snapping elbow at full extension.</p>
+        </div>
+
+        <!-- ==================== GYM & STRENGTH: LEGS ==================== -->
+        <div class="exercise-card" data-category="gym" data-search="barbell back squat legs quads glutes strength gym">
+            <div>
+                <span class="badge badge-free">Gym • Legs</span>
+                <h2 class="exercise-title">Barbell Back Squat</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Quads, Glutes & Lower Back<br>
+                    <strong>Execution:</strong> Bar across upper traps. Hinge hips back and bend knees until thighs break parallel.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Drive knees outward inline with toes; keep chest upright.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="leg press machine quads hamstrings glutes strength gym">
+            <div>
+                <span class="badge badge-free">Gym • Legs</span>
+                <h2 class="exercise-title">45-Degree Leg Press</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Quadriceps & Glute Focus<br>
+                    <strong>Execution:</strong> Feet shoulder-width on sled. Lower weight until knees reach 90°, press through heels.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Never lock out knees at top; keep lower back pressed against pad.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="romanian deadlift hamstrings glutes lower back strength gym">
+            <div>
+                <span class="badge badge-free">Gym • Legs</span>
+                <h2 class="exercise-title">Barbell Romanian Deadlift (RDL)</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Hamstrings & Gluteal Tie-In<br>
+                    <strong>Execution:</strong> Slight knee bend. Push hips back, lowering bar along shins until hamstring stretch.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Movement ends when hips stop traveling backward.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="walking dumbbell lunges quads glutes legs strength gym">
+            <div>
+                <span class="badge badge-free">Gym • Legs</span>
+                <h2 class="exercise-title">Walking Dumbbell Lunges</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Quads, Glutes & Unilateral Balance<br>
+                    <strong>Execution:</strong> Step forward, drop back knee toward floor until front knee reaches 90°. Drive forward into next step.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Keep torso upright; do not let front knee cave inward.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="seated leg curl hamstrings machine legs gym">
+            <div>
+                <span class="badge badge-free">Gym • Legs</span>
+                <h2 class="exercise-title">Seated Machine Leg Curl</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Hamstring Isolation<br>
+                    <strong>Execution:</strong> Pad over lower ankles. Pull heels under seat, contract hamstrings hard, release under control.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Keep thighs firmly secured beneath hold-down pad.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="standing calf raises calves soleus legs strength gym">
+            <div>
+                <span class="badge badge-free">Gym • Legs</span>
+                <h2 class="exercise-title">Standing Machine Calf Raise</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Gastrocnemius (Calves)<br>
+                    <strong>Execution:</strong> Balls of feet on platform. Lower heels for full deep stretch, extend ankles high onto toes.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Hold 1-second pause at top peak contraction.</p>
+        </div>
+
+        <!-- ==================== GYM & STRENGTH: BACK & SHOULDERS ==================== -->
+        <div class="exercise-card" data-category="gym" data-search="lat pulldown back lats upper back gym">
+            <div>
+                <span class="badge badge-free">Gym • Back</span>
+                <h2 class="exercise-title">Wide-Grip Lat Pulldown</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Latissimus Dorsi (V-Taper)<br>
+                    <strong>Execution:</strong> Grip bar wider than shoulders. Pull bar to upper chest, driving elbows down and back.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Avoid swinging torso backward past 15°.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="bent over barbell row back lats thickness gym">
+            <div>
+                <span class="badge badge-free">Gym • Back</span>
+                <h2 class="exercise-title">Bent-Over Barbell Row</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Mid Back, Rhomboids & Lats<br>
+                    <strong>Execution:</strong> Hinge at 45°. Row barbell to belly button, pulling through elbows.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Brace core; maintain flat spine throughout set.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="overhead shoulder press barbell overhead military press shoulders delts gym">
+            <div>
+                <span class="badge badge-free">Gym • Shoulders</span>
+                <h2 class="exercise-title">Standing Overhead Barbell Military Press</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Anterior & Lateral Deltoids<br>
+                    <strong>Execution:</strong> Bar on front rack. Press overhead, locking bar out directly over crown of head.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Squeeze glutes and core to prevent back hyperextension.</p>
+        </div>
+
+        <div class="exercise-card" data-category="gym" data-search="dumbbell lateral raises side delts shoulders width gym">
+            <div>
+                <span class="badge badge-free">Gym • Shoulders</span>
+                <h2 class="exercise-title">Dumbbell Lateral Raise</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Lateral Deltoid (Shoulder Width)<br>
+                    <strong>Execution:</strong> Soft elbows. Raise dumbbells out to sides until parallel with floor.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Lead with elbows, not wrists; avoid shrugging traps.</p>
+        </div>
+
+        <!-- ==================== HOME & BODYWEIGHT ==================== -->
+        <div class="exercise-card" data-category="home" data-search="tempo pushup chest triceps home bodyweight calisthenics">
+            <div>
+                <span class="badge badge-free">Home • Chest/Core</span>
                 <h2 class="exercise-title">3-Second Eccentric Push-Up</h2>
                 <p class="exercise-details">
                     <strong>Target:</strong> Chest, Core & Triceps<br>
-                    <strong>Setup:</strong> Full plank position. Lower chest over 3 full seconds, explosive drive upwards.
+                    <strong>Execution:</strong> Full plank position. Lower chest over 3 full seconds, explosive drive upward.
                 </p>
             </div>
-            <p class="form-cue">✓ Form Cue: Squeeze glutes to maintain rigid spine throughout.</p>
+            <p class="form-cue">✓ Form Cue: Squeeze glutes to keep lower back from sagging.</p>
         </div>
 
-        <div class="exercise-card" data-category="home" data-search="bulgarian split squat legs quads bodyweight home">
+        <div class="exercise-card" data-category="home" data-search="bodyweight bulgarian split squat legs quads home calisthenics">
             <div>
-                <span class="badge badge-free">Home • Free Sample</span>
-                <h2 class="exercise-title">Bodyweight Bulgarian Split Squat</h2>
+                <span class="badge badge-free">Home • Legs</span>
+                <h2 class="exercise-title">Elevated Bulgarian Split Squat</h2>
                 <p class="exercise-details">
-                    <strong>Target:</strong> Quadriceps & Glute Medius<br>
-                    <strong>Setup:</strong> Rear foot elevated on chair or couch. Lower front hip until thigh is parallel to ground.
+                    <strong>Target:</strong> Quadriceps & Glutes<br>
+                    <strong>Execution:</strong> Rear foot elevated on bench/couch. Drop rear knee down, pressing up through front heel.
                 </p>
             </div>
-            <p class="form-cue">✓ Form Cue: Keep front foot flat and press through middle foot.</p>
+            <p class="form-cue">✓ Form Cue: Keep front foot flat on ground throughout.</p>
         </div>
 
-        <!-- YOGA EXERCISES -->
+        <div class="exercise-card" data-category="home" data-search="pullups back biceps bodyweight home calisthenics">
+            <div>
+                <span class="badge badge-free">Home • Back/Arms</span>
+                <h2 class="exercise-title">Bodyweight Pull-Ups</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Upper Lats, Rhomboids & Biceps<br>
+                    <strong>Execution:</strong> Overhand grip. Pull chest to bar, driving elbows down toward ribcage.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Deadhang pause at bottom before initiating next rep.</p>
+        </div>
+
+        <div class="exercise-card" data-category="home" data-search="bodyweight dips triceps chest home calisthenics">
+            <div>
+                <span class="badge badge-free">Home • Arms/Chest</span>
+                <h2 class="exercise-title">Parallel Bar Dips</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Lower Chest & Triceps<br>
+                    <strong>Execution:</strong> Support body on bars. Lower torso until elbows reach 90°, press back to top.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Lean forward slightly to emphasize chest.</p>
+        </div>
+
+        <!-- ==================== YOGA & MOBILITY ==================== -->
         <div class="exercise-card" data-category="yoga" data-search="downward facing dog mobility flexibility yoga stretch">
             <div>
-                <span class="badge badge-free">Yoga • Free Sample</span>
+                <span class="badge badge-free">Yoga • Mobility</span>
                 <h2 class="exercise-title">Downward-Facing Dog (Adho Mukha)</h2>
                 <p class="exercise-details">
                     <strong>Target:</strong> Posterior Chain, Shoulders & Spine<br>
-                    <strong>Setup:</strong> Hands shoulder-width, press floor away while driving hips up and back.
+                    <strong>Execution:</strong> Hands shoulder-width, press floor away while driving hips up and back.
                 </p>
             </div>
             <p class="form-cue">✓ Form Cue: Bend knees slightly if hamstrings pull lower back into rounding.</p>
         </div>
 
-        <div class="exercise-card" data-category="yoga" data-search="warrior posture hips balance stretch yoga">
+        <div class="exercise-card" data-category="yoga" data-search="warrior II pose hips balance stretch yoga">
             <div>
-                <span class="badge badge-free">Yoga • Free Sample</span>
+                <span class="badge badge-free">Yoga • Balance</span>
                 <h2 class="exercise-title">Warrior II Pose (Virabhadrasana II)</h2>
                 <p class="exercise-details">
                     <strong>Target:</strong> Hip Openers & Quadriceps Endurance<br>
-                    <strong>Setup:</strong> Step feet wide, front knee bent 90 degrees over ankle, arms extended parallel to floor.
+                    <strong>Execution:</strong> Wide stance, front knee bent 90° over ankle, arms extended parallel to floor.
                 </p>
             </div>
             <p class="form-cue">✓ Form Cue: Track front knee outward over second toe.</p>
         </div>
 
-        <!-- PILATES EXERCISES -->
+        <div class="exercise-card" data-category="yoga" data-search="cat cow stretch spine mobility recovery yoga">
+            <div>
+                <span class="badge badge-free">Yoga • Spine</span>
+                <h2 class="exercise-title">Cat-Cow Spinal Flow</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Thoracic & Lumbar Mobility<br>
+                    <strong>Execution:</strong> On all fours. Inhale to arch back (Cow), exhale to round spine upward (Cat).
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Synchronize movement fluidly with full deep breaths.</p>
+        </div>
+
+        <!-- ==================== PILATES & CORE ==================== -->
         <div class="exercise-card" data-category="pilates" data-search="pilates hundred core stamina endurance mat">
             <div>
-                <span class="badge badge-free">Pilates • Free Sample</span>
+                <span class="badge badge-free">Pilates • Core</span>
                 <h2 class="exercise-title">The Pilates Hundred</h2>
                 <p class="exercise-details">
-                    <strong>Target:</strong> Deep Transverse Abdominis & Breath Control<br>
-                    <strong>Setup:</strong> Lie flat, raise legs to tabletop, curl head/shoulders up, pump arms vigorously for 100 beats.
+                    <strong>Target:</strong> Deep Transverse Abdominis<br>
+                    <strong>Execution:</strong> Lie flat, raise legs to tabletop, curl shoulders up, pump arms vigorously for 100 beats.
                 </p>
             </div>
             <p class="form-cue">✓ Form Cue: Inhale for 5 pumps, exhale for 5 pumps.</p>
         </div>
 
-        <!-- LOCKED PREMIUM EXERCISES -->
-        <div class="exercise-card" data-category="gym" data-search="barbell back squat legs strength gym">
+        <div class="exercise-card" data-category="pilates" data-search="pilates roll up spine ab control mat">
+            <div>
+                <span class="badge badge-free">Pilates • Core</span>
+                <h2 class="exercise-title">Classical Pilates Roll-Up</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Full Rectus Abdominis & Spinal Articulation<br>
+                    <strong>Execution:</strong> Lie flat with arms extended overhead. Articulate spine off floor bone-by-bone into forward bend.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Avoid momentum; press heels firmly into mat.</p>
+        </div>
+
+        <div class="exercise-card" data-category="pilates" data-search="swimming pilates upper back glutes posture mat">
+            <div>
+                <span class="badge badge-free">Pilates • Posture</span>
+                <h2 class="exercise-title">Pilates Swimming Extension</h2>
+                <p class="exercise-details">
+                    <strong>Target:</strong> Spinal Erectors, Glutes & Shoulder Blade Stabilizers<br>
+                    <strong>Execution:</strong> Lie prone on stomach. Lift opposite arm and leg, flutter rapidly while breathing evenly.
+                </p>
+            </div>
+            <p class="form-cue">✓ Form Cue: Keep gaze down toward mat to maintain long neck.</p>
+        </div>
+
+        <!-- ==================== LOCKED PREMIUM SAMPLES ==================== -->
+        <div class="exercise-card" data-category="gym" data-search="cable crossovers upper inner chest premium gym">
             <div class="card-locked">
                 <span class="badge">Gym • Premium</span>
-                <h2 class="exercise-title">Barbell High-Bar Back Squat</h2>
+                <h2 class="exercise-title">Low-to-High Cable Upper Chest Flyes</h2>
                 <p class="exercise-details">
-                    <strong>Target:</strong> Quads, Glutes & Spinal Erectors<br>
-                    <strong>Setup:</strong> Bar resting across upper traps. Break at hips and knees simultaneously.
+                    <strong>Target:</strong> Clavicular Chest Peak<br>
+                    <strong>Execution:</strong> Cables set low. Scoop handles up and together at eyebrow level.
                 </p>
             </div>
             <div class="lock-overlay">
@@ -382,13 +674,13 @@
             </div>
         </div>
 
-        <div class="exercise-card" data-category="pilates" data-search="criss cross obliques core pilates mat">
+        <div class="exercise-card" data-category="pilates" data-search="criss cross obliques core pilates mat premium">
             <div class="card-locked">
                 <span class="badge">Pilates • Premium</span>
                 <h2 class="exercise-title">Pilates Criss-Cross Oblique Rotations</h2>
                 <p class="exercise-details">
                     <strong>Target:</strong> Internal & External Obliques<br>
-                    <strong>Setup:</strong> Hands behind head, rotate shoulder to opposite knee while extending non-working leg.
+                    <strong>Execution:</strong> Hands behind head, rotate shoulder to opposite knee while extending non-working leg.
                 </p>
             </div>
             <div class="lock-overlay">
@@ -403,21 +695,18 @@
     <!-- Membership Pricing Section -->
     <div class="membership-section" id="pricing">
         <h2>Unlock the Complete Exercise Vault</h2>
-        <p style="color: var(--text-muted);">Choose your membership plan to access all 500+ exercises, form cues, and workout programs.</p>
+        <p style="color: var(--text-muted);">Choose your plan to access all 500+ exercises, form cues, and workout programs.</p>
         
         <div class="price-options">
-            <!-- Tier 1: Monthly -->
             <div class="price-card">
                 <div>
                     <span class="price-title">Monthly Pass</span>
                     <div class="price-amount">$3.99<span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">/mo</span></div>
                     <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Full library access. Cancel anytime.</p>
                 </div>
-                <!-- Replace YOUR_STRIPE_MONTHLY_LINK with your Stripe Payment Link -->
                 <a href="YOUR_STRIPE_MONTHLY_LINK" class="buy-btn">Get Monthly Pass</a>
             </div>
 
-            <!-- Tier 2: Annual VIP -->
             <div class="price-card featured">
                 <div>
                     <span class="badge">BEST VALUE</span>
@@ -425,25 +714,21 @@
                     <div class="price-amount">$20.00<span style="font-size:0.9rem; font-weight:normal; color:var(--text-muted);">/yr</span></div>
                     <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Save ~58% over monthly pricing.</p>
                 </div>
-                <!-- Replace YOUR_STRIPE_ANNUAL_LINK with your Stripe Payment Link -->
                 <a href="YOUR_STRIPE_ANNUAL_LINK" class="buy-btn">Get Annual VIP</a>
             </div>
 
-            <!-- Tier 3: Lifetime -->
             <div class="price-card">
                 <div>
                     <span class="price-title">Lifetime Founder</span>
                     <div class="price-amount">$80.00</div>
                     <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">One-time payment. Permanent access.</p>
                 </div>
-                <!-- Replace YOUR_STRIPE_LIFETIME_LINK with your Stripe Payment Link -->
                 <a href="YOUR_STRIPE_LIFETIME_LINK" class="buy-btn">Get Lifetime Access</a>
             </div>
         </div>
     </div>
 
     <script>
-        // Category Filter Logic
         function setCategory(cat, btn) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
@@ -458,7 +743,6 @@
             });
         }
 
-        // Live Search Filter Logic
         function filterExercises() {
             const query = document.getElementById('searchInput').value.toLowerCase();
             const cards = document.querySelectorAll('.exercise-card');
@@ -473,10 +757,10 @@
             });
         }
 
-        // Smooth Scroll to Pricing
         function scrollToPricing() {
             document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>
 </html>
+            
