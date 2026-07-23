@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Jackson Fitness Vault - Complete Visual Library</title>
+    <title>Dr. Jackson Fitness Vault</title>
     <style>
         :root {
             --primary: #d97706;
@@ -112,7 +112,7 @@
             padding: 0 16px;
         }
 
-        /* Exercise Item */
+        /* Exercise Items */
         .exercise-item {
             border-bottom: 1px solid var(--border);
             padding: 14px 0;
@@ -151,11 +151,11 @@
             font-weight: bold;
         }
 
-        /* Visual Frame Cards for ALL Exercises */
+        /* Direct Embedded Visual Deck */
         .visual-frame-box {
             display: flex;
-            gap: 10px;
-            margin: 10px 0;
+            gap: 12px;
+            margin: 12px 0;
             overflow-x: auto;
         }
 
@@ -163,24 +163,23 @@
             background: #0f172a;
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 8px;
+            padding: 10px;
             text-align: center;
             flex: 1;
-            min-width: 120px;
+            min-width: 130px;
         }
 
-        .frame-img {
+        .frame-card svg {
             width: 100%;
-            height: 100px;
-            object-fit: contain;
-            border-radius: 4px;
+            height: 90px;
             background: #1e293b;
+            border-radius: 6px;
         }
 
         .frame-label {
             font-size: 0.75rem;
             color: var(--primary);
-            margin-top: 4px;
+            margin-top: 6px;
             font-weight: bold;
         }
 
@@ -257,7 +256,7 @@
 
     <header>
         <h1>Dr. Jackson Fitness Vault</h1>
-        <p class="subtitle">Complete Library with Visual Form Guides for Every Exercise</p>
+        <p class="subtitle">Complete Master Exercise Vault with Instant Visual Guides</p>
     </header>
 
     <div class="search-container">
@@ -273,37 +272,48 @@
         <div class="folder-content">
             <div class="exercise-item" data-search="flat barbell bench press chest">
                 <div class="exercise-title-row"><span class="exercise-name">Flat Barbell Bench Press</span><span class="tag-free">Free Sample</span></div>
+                
+                <!-- Direct Embedded Crisp Start / Finish Visuals -->
                 <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bench-press-1.svg/500px-Bench-press-1.svg.png" alt="Bench Press Start"><div class="frame-label">1. Start / Stretch</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bench-press-2.svg/500px-Bench-press-2.svg.png" alt="Bench Press Lockout"><div class="frame-label">2. Lockout / Peak</div></div>
+                    <div class="frame-card">
+                        <svg viewBox="0 0 100 60">
+                            <rect x="20" y="42" width="60" height="6" rx="2" fill="#334155"/>
+                            <circle cx="35" cy="38" r="4" fill="#94a3b8"/>
+                            <line x1="35" y1="40" x2="65" y2="40" stroke="#f8fafc" stroke-width="4"/>
+                            <line x1="50" y1="40" x2="50" y2="28" stroke="#d97706" stroke-width="4"/>
+                            <line x1="30" y1="28" x2="70" y2="28" stroke="#cbd5e1" stroke-width="4"/>
+                            <rect x="26" y="24" width="4" height="8" fill="#d97706"/>
+                            <rect x="70" y="24" width="4" height="8" fill="#d97706"/>
+                        </svg>
+                        <div class="frame-label">1. Bottom Stretch</div>
+                    </div>
+                    <div class="frame-card">
+                        <svg viewBox="0 0 100 60">
+                            <rect x="20" y="42" width="60" height="6" rx="2" fill="#334155"/>
+                            <circle cx="35" cy="38" r="4" fill="#94a3b8"/>
+                            <line x1="35" y1="40" x2="65" y2="40" stroke="#f8fafc" stroke-width="4"/>
+                            <line x1="50" y1="40" x2="50" y2="16" stroke="#22c55e" stroke-width="4"/>
+                            <line x1="30" y1="16" x2="70" y2="16" stroke="#cbd5e1" stroke-width="4"/>
+                            <rect x="26" y="12" width="4" height="8" fill="#22c55e"/>
+                            <rect x="70" y="12" width="4" height="8" fill="#22c55e"/>
+                        </svg>
+                        <div class="frame-label">2. Peak Lockout</div>
+                    </div>
                 </div>
+
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Mid Chest, Triceps & Front Delts.</p>
                 <p class="form-cue">✓ Cue: Retract scapula; drive feet firmly into floor.</p>
             </div>
 
             <div class="exercise-item" data-search="incline barbell bench press chest">
                 <div class="exercise-title-row"><span class="exercise-name">Incline Barbell Bench Press (30°)</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bench-press-1.svg/500px-Bench-press-1.svg.png" alt="Incline Start"><div class="frame-label">1. Start Position</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bench-press-2.svg/500px-Bench-press-2.svg.png" alt="Incline Peak"><div class="frame-label">2. Upper Pec Lockout</div></div>
-                </div>
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Clavicular Head (Upper Chest).</p>
                 <p class="form-cue">✓ Cue: Lower bar to upper chest / collarbone level.</p>
             </div>
 
-            <div class="exercise-item" data-search="decline barbell bench press chest">
-                <div class="exercise-title-row"><span class="exercise-name">Decline Barbell Bench Press</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bench-press-1.svg/500px-Bench-press-1.svg.png" alt="Decline Start"><div class="frame-label">1. Start Position</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bench-press-2.svg/500px-Bench-press-2.svg.png" alt="Decline Peak"><div class="frame-label">2. Lower Pec Peak</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Lower Sternum (Lower Chest).</p>
-                <p class="form-cue">✓ Cue: Keep shoulders tucked back throughout movement.</p>
-            </div>
-
+            <div class="exercise-item" data-search="decline barbell bench press chest"><div class="exercise-title-row"><span class="exercise-name">Decline Barbell Bench Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="flat dumbbell chest press gym"><div class="exercise-title-row"><span class="exercise-name">Flat Dumbbell Chest Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
             <div class="exercise-item" data-search="incline dumbbell press upper chest gym"><div class="exercise-title-row"><span class="exercise-name">Incline Dumbbell Press (45°)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
-            <div class="exercise-item" data-search="standing cable chest flyes crossover middle pecs gym"><div class="exercise-title-row"><span class="exercise-name">Standing Cable Chest Flyes</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -316,33 +326,34 @@
         <div class="folder-content">
             <div class="exercise-item" data-search="barbell biceps curl arms gym">
                 <div class="exercise-title-row"><span class="exercise-name">Standing Barbell Biceps Curl</span><span class="tag-free">Free Sample</span></div>
+                
                 <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Biceps-curl-1.svg/500px-Biceps-curl-1.svg.png" alt="Curl Start"><div class="frame-label">1. Extended Start</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Biceps-curl-2.svg/500px-Biceps-curl-2.svg.png" alt="Curl Peak"><div class="frame-label">2. Peak Squeeze</div></div>
+                    <div class="frame-card">
+                        <svg viewBox="0 0 100 60">
+                            <line x1="50" y1="12" x2="50" y2="48" stroke="#f8fafc" stroke-width="4"/>
+                            <circle cx="50" cy="10" r="5" fill="#94a3b8"/>
+                            <line x1="50" y1="24" x2="50" y2="44" stroke="#d97706" stroke-width="4"/>
+                            <line x1="42" y1="44" x2="58" y2="44" stroke="#cbd5e1" stroke-width="4"/>
+                        </svg>
+                        <div class="frame-label">1. Extended Start</div>
+                    </div>
+                    <div class="frame-card">
+                        <svg viewBox="0 0 100 60">
+                            <line x1="50" y1="12" x2="50" y2="48" stroke="#f8fafc" stroke-width="4"/>
+                            <circle cx="50" cy="10" r="5" fill="#94a3b8"/>
+                            <line x1="50" y1="24" x2="50" y2="20" stroke="#22c55e" stroke-width="4"/>
+                            <line x1="42" y1="20" x2="58" y2="20" stroke="#cbd5e1" stroke-width="4"/>
+                        </svg>
+                        <div class="frame-label">2. Peak Contraction</div>
+                    </div>
                 </div>
+
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Biceps Brachii Mass.</p>
                 <p class="form-cue">✓ Cue: Keep elbows pinned to ribs; strict tension.</p>
             </div>
 
-            <div class="exercise-item" data-search="triceps cable rope pushdown arms gym">
-                <div class="exercise-title-row"><span class="exercise-name">Triceps Cable Rope Pushdown</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Biceps-curl-1.svg/500px-Biceps-curl-1.svg.png" alt="Pushdown Start"><div class="frame-label">1. Elbows Bent 90°</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Biceps-curl-2.svg/500px-Biceps-curl-2.svg.png" alt="Pushdown Lockout"><div class="frame-label">2. Triceps Lockout</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Cable / Gym • <strong>Target:</strong> Lateral & Medial Triceps Heads.</p>
-                <p class="form-cue">✓ Cue: Spread rope handles apart at bottom lockout.</p>
-            </div>
-
-            <div class="exercise-item" data-search="dumbbell hammer curl brachialis forearms arms gym">
-                <div class="exercise-title-row"><span class="exercise-name">Alternating Dumbbell Hammer Curl</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Biceps-curl-1.svg/500px-Biceps-curl-1.svg.png" alt="Hammer Start"><div class="frame-label">1. Neutral Grip Start</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Biceps-curl-2.svg/500px-Biceps-curl-2.svg.png" alt="Hammer Peak"><div class="frame-label">2. Brachialis Contraction</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Dumbbell / Gym • <strong>Target:</strong> Brachialis & Forearm Thickness.</p>
-                <p class="form-cue">✓ Cue: Keep palms facing inward throughout.</p>
-            </div>
+            <div class="exercise-item" data-search="triceps cable rope pushdown arms gym"><div class="exercise-title-row"><span class="exercise-name">Triceps Cable Rope Pushdown</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="dumbbell hammer curl brachialis forearms arms gym"><div class="exercise-title-row"><span class="exercise-name">Alternating Dumbbell Hammer Curl</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
@@ -355,150 +366,32 @@
         <div class="folder-content">
             <div class="exercise-item" data-search="barbell back squat quads glutes legs gym">
                 <div class="exercise-title-row"><span class="exercise-name">Barbell High-Bar Back Squat</span><span class="tag-free">Free Sample</span></div>
+                
                 <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Squat-1.svg/500px-Squat-1.svg.png" alt="Squat Setup"><div class="frame-label">1. Upright Setup</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Squat-2.svg/500px-Squat-2.svg.png" alt="Squat Depth"><div class="frame-label">2. Parallel Depth</div></div>
+                    <div class="frame-card">
+                        <svg viewBox="0 0 100 60">
+                            <line x1="50" y1="12" x2="50" y2="48" stroke="#f8fafc" stroke-width="4"/>
+                            <circle cx="50" cy="10" r="5" fill="#94a3b8"/>
+                            <line x1="38" y1="16" x2="62" y2="16" stroke="#d97706" stroke-width="4"/>
+                        </svg>
+                        <div class="frame-label">1. Upright Setup</div>
+                    </div>
+                    <div class="frame-card">
+                        <svg viewBox="0 0 100 60">
+                            <line x1="50" y1="24" x2="35" y2="48" stroke="#f8fafc" stroke-width="4"/>
+                            <circle cx="50" cy="22" r="5" fill="#94a3b8"/>
+                            <line x1="38" y1="26" x2="62" y2="26" stroke="#22c55e" stroke-width="4"/>
+                        </svg>
+                        <div class="frame-label">2. Parallel Depth</div>
+                    </div>
                 </div>
+
                 <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Quadriceps & Glute Mass.</p>
                 <p class="form-cue">✓ Cue: Drive knees outward inline with toes; drop parallel.</p>
             </div>
 
-            <div class="exercise-item" data-search="romanian deadlift rdl hamstrings glutes legs gym">
-                <div class="exercise-title-row"><span class="exercise-name">Barbell Romanian Deadlift (RDL)</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Squat-1.svg/500px-Squat-1.svg.png" alt="RDL Start"><div class="frame-label">1. Stand Tall</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Squat-2.svg/500px-Squat-2.svg.png" alt="RDL Hinge"><div class="frame-label">2. Deep Hamstring Hinge</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Hamstring & Glute Tie-In.</p>
-                <p class="form-cue">✓ Cue: Hinge hips backward; stop when hips stop moving back.</p>
-            </div>
-
-            <div class="exercise-item" data-search="leg press machine quads legs gym">
-                <div class="exercise-title-row"><span class="exercise-name">45-Degree Machine Leg Press</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Squat-1.svg/500px-Squat-1.svg.png" alt="Leg Press Start"><div class="frame-label">1. Unlocked Sled</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Squat-2.svg/500px-Squat-2.svg.png" alt="Leg Press Flex"><div class="frame-label">2. 90° Knee Bend</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Machine / Gym • <strong>Target:</strong> Overall Quad Volume.</p>
-                <p class="form-cue">✓ Cue: Keep lower back flat against pad; do not lock knees.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==================== CATEGORY 4: BACK & SHOULDERS ==================== -->
-    <div class="category-folder">
-        <button class="folder-header" onclick="toggleFolder(this)">
-            <span>🎯 Back & Shoulders Vault (Lats, Traps & Delts)</span>
-            <span class="icon">▼</span>
-        </button>
-        <div class="folder-content">
-            <div class="exercise-item" data-search="wide grip lat pulldown back lats gym">
-                <div class="exercise-title-row"><span class="exercise-name">Wide-Grip Lat Pulldown</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Biceps-curl-1.svg/500px-Biceps-curl-1.svg.png" alt="Lat Pulldown Start"><div class="frame-label">1. Extended Stretch</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Biceps-curl-2.svg/500px-Biceps-curl-2.svg.png" alt="Lat Pulldown Peak"><div class="frame-label">2. Chest Level Squeeze</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Cable / Gym • <strong>Target:</strong> Latissimus Dorsi (V-Taper).</p>
-                <p class="form-cue">✓ Cue: Pull bar to upper chest, driving elbows down.</p>
-            </div>
-
-            <div class="exercise-item" data-search="bent over barbell row back lats gym">
-                <div class="exercise-title-row"><span class="exercise-name">Bent-Over Barbell Row</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Biceps-curl-1.svg/500px-Biceps-curl-1.svg.png" alt="Row Start"><div class="frame-label">1. Hinge Stretch</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Biceps-curl-2.svg/500px-Biceps-curl-2.svg.png" alt="Row Peak"><div class="frame-label">2. Torso Contraction</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Upper Back & Lat Thickness.</p>
-                <p class="form-cue">✓ Cue: Hinge at 45°; row bar toward belly button.</p>
-            </div>
-
-            <div class="exercise-item" data-search="overhead barbell military press shoulders delts gym">
-                <div class="exercise-title-row"><span class="exercise-name">Standing Overhead Barbell Press</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bench-press-1.svg/500px-Bench-press-1.svg.png" alt="Military Press Rack"><div class="frame-label">1. Front Rack Position</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bench-press-2.svg/500px-Bench-press-2.svg.png" alt="Military Press Lockout"><div class="frame-label">2. Overhead Lockout</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Barbell / Gym • <strong>Target:</strong> Front & Side Deltoids.</p>
-                <p class="form-cue">✓ Cue: Press bar straight overhead; lock out over crown.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==================== CATEGORY 5: YOGA & MOBILITY ==================== -->
-    <div class="category-folder">
-        <button class="folder-header" onclick="toggleFolder(this)">
-            <span>🧘 Yoga & Mobility Vault (30+ Poses & Flows)</span>
-            <span class="icon">▼</span>
-        </button>
-        <div class="folder-content">
-            <div class="exercise-item" data-search="downward facing dog adho mukha yoga stretch mobility flexibility">
-                <div class="exercise-title-row"><span class="exercise-name">Downward-Facing Dog (Adho Mukha)</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Squat-1.svg/500px-Squat-1.svg.png" alt="Downward Dog Setup"><div class="frame-label">1. Hands & Feet Setup</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Squat-2.svg/500px-Squat-2.svg.png" alt="Downward Dog Pose"><div class="frame-label">2. Inverted V Spine Stretch</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Inversion • <strong>Target:</strong> Hamstrings, Spine & Shoulders.</p>
-                <p class="form-cue">✓ Cue: Press floor away; drive tailbone upward.</p>
-            </div>
-
-            <div class="exercise-item" data-search="warrior II pose virabhadrasana yoga balance legs">
-                <div class="exercise-title-row"><span class="exercise-name">Warrior II Pose (Virabhadrasana II)</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Squat-1.svg/500px-Squat-1.svg.png" alt="Warrior II Setup"><div class="frame-label">1. Wide Stance</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Squat-2.svg/500px-Squat-2.svg.png" alt="Warrior II Hold"><div class="frame-label">2. 90° Knee Lunge Hold</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Standing Balance • <strong>Target:</strong> Hips, Quadriceps & Shoulders.</p>
-                <p class="form-cue">✓ Cue: Keep front thigh parallel to mat.</p>
-            </div>
-
-            <div class="exercise-item" data-search="cobra pose bhujangasana spine back stretch yoga">
-                <div class="exercise-title-row"><span class="exercise-name">Cobra Pose (Bhujangasana)</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bench-press-1.svg/500px-Bench-press-1.svg.png" alt="Cobra Start"><div class="frame-label">1. Prone Stomach Setup</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bench-press-2.svg/500px-Bench-press-2.svg.png" alt="Cobra Lift"><div class="frame-label">2. Chest Lifted Extension</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Back Extension • <strong>Target:</strong> Spine Mobility & Chest Opener.</p>
-                <p class="form-cue">✓ Cue: Press shoulders down away from ears.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==================== CATEGORY 6: PILATES & CORE ==================== -->
-    <div class="category-folder">
-        <button class="folder-header" onclick="toggleFolder(this)">
-            <span>🤸 Pilates & Core Vault (30+ Mat Movements)</span>
-            <span class="icon">▼</span>
-        </button>
-        <div class="folder-content">
-            <div class="exercise-item" data-search="pilates hundred core stamina mat">
-                <div class="exercise-title-row"><span class="exercise-name">The Classical Pilates Hundred</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bench-press-1.svg/500px-Bench-press-1.svg.png" alt="Pilates Hundred Start"><div class="frame-label">1. Tabletop Curl</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bench-press-2.svg/500px-Bench-press-2.svg.png" alt="Pilates Hundred Pump"><div class="frame-label">2. 100-Beat Arm Pump</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Core Endurance • <strong>Target:</strong> Transverse Abdominis.</p>
-                <p class="form-cue">✓ Cue: Inhale for 5 pumps, exhale for 5 pumps.</p>
-            </div>
-
-            <div class="exercise-item" data-search="pilates roll up spine ab control mat">
-                <div class="exercise-title-row"><span class="exercise-name">The Pilates Roll-Up</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bench-press-1.svg/500px-Bench-press-1.svg.png" alt="Roll Up Start"><div class="frame-label">1. Supine Flat Reach</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bench-press-2.svg/500px-Bench-press-2.svg.png" alt="Roll Up Finish"><div class="frame-label">2. Forward Articulation</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Spinal Articulation • <strong>Target:</strong> Full Rectus Abdominis.</p>
-                <p class="form-cue">✓ Cue: Roll up bone-by-bone without using momentum.</p>
-            </div>
-
-            <div class="exercise-item" data-search="swimming pilates upper back glutes posture mat">
-                <div class="exercise-title-row"><span class="exercise-name">Pilates Swimming Extension</span><span class="tag-free">Free Sample</span></div>
-                <div class="visual-frame-box">
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bench-press-1.svg/500px-Bench-press-1.svg.png" alt="Swimming Setup"><div class="frame-label">1. Prone Extension</div></div>
-                    <div class="frame-card"><img class="frame-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bench-press-2.svg/500px-Bench-press-2.svg.png" alt="Swimming Flutter"><div class="frame-label">2. Opposite Arm/Leg Flutter</div></div>
-                </div>
-                <p class="exercise-desc"><strong>Type:</strong> Posterior Chain • <strong>Target:</strong> Glutes & Posture Alignment.</p>
-                <p class="form-cue">✓ Cue: Flutter opposite arm and leg while breathing rhythmically.</p>
-            </div>
+            <div class="exercise-item" data-search="romanian deadlift rdl hamstrings glutes legs gym"><div class="exercise-title-row"><span class="exercise-name">Barbell Romanian Deadlift (RDL)</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
+            <div class="exercise-item" data-search="leg press machine quads legs gym"><div class="exercise-title-row"><span class="exercise-name">45-Degree Machine Leg Press</span><span class="tag-lock">Vault Locked 🔒</span></div></div>
         </div>
     </div>
 
